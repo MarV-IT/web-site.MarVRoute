@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Web Site Route допомагає планувати маршрути, точки зупинок і графік поїздок на одній зрозумілій сторінці."
+    />
+    <title>Web Site Route | Планування маршрутів</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Web Site Route home">
+        <span class="brand-mark">R</span>
+        <span>Web Site Route</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Головна навігація">
+        <a href="#features">Можливості</a>
+        <a href="#route">Приклад</a>
+        <a href="#contact">Заявка</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <img class="hero-image" src="assets/hero-route.png" alt="Планування маршруту на ноутбуці та телефоні" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Розумне планування поїздок</p>
+          <h1>Маршрути, зупинки і графік в одному місці.</h1>
+          <p class="hero-copy">
+            Web Site Route допомагає швидко скласти оптимальний маршрут, побачити ключові
+            точки та передати план команді або клієнту без зайвих таблиць.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Отримати демо</a>
+            <a class="button secondary" href="#route">Подивитись приклад</a>
+          </div>
+          <dl class="hero-stats" aria-label="Ключові показники">
+            <div>
+              <dt>32%</dt>
+              <dd>менше ручного планування</dd>
+            </div>
+            <div>
+              <dt>18 хв</dt>
+              <dd>до готового маршруту</dd>
+            </div>
+            <div>
+              <dt>24/7</dt>
+              <dd>доступ до планів</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">Що всередині</p>
+          <h2>Все потрібне для маршруту без хаосу.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon">01</span>
+            <h3>Оптимізація точок</h3>
+            <p>Додавайте адреси, пріоритети й часові вікна, щоб швидко побудувати логічний порядок зупинок.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">02</span>
+            <h3>Командний доступ</h3>
+            <p>Діліться маршрутом з водіями, менеджерами або клієнтами через один актуальний план.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">03</span>
+            <h3>Швидкі зміни</h3>
+            <p>Оновлюйте зупинки та дедлайни без перерахунку всього маршруту вручну.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="route-band" id="route">
+        <div class="route-copy">
+          <p class="eyebrow">Приклад маршруту</p>
+          <h2>Від заявки до готового плану за кілька кроків.</h2>
+          <p>
+            Сервіс підходить для доставок, сервісних виїздів, локальних турів і будь-яких
+            задач, де важливо бачити маршрут, час і відповідального.
+          </p>
+        </div>
+        <div class="route-panel" aria-label="Приклад денного маршруту">
+          <div class="route-line"></div>
+          <div class="route-stop">
+            <strong>09:00</strong>
+            <span>Старт зі складу</span>
+          </div>
+          <div class="route-stop">
+            <strong>10:20</strong>
+            <span>Клієнтський візит</span>
+          </div>
+          <div class="route-stop">
+            <strong>12:10</strong>
+            <span>Проміжна зупинка</span>
+          </div>
+          <div class="route-stop">
+            <strong>15:40</strong>
+            <span>Фінальна доставка</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div>
+          <p class="eyebrow">Старт</p>
+          <h2>Хочете спланувати перший маршрут?</h2>
+          <p>Залиште контакти, і ми підготуємо коротке демо під ваш сценарій.</p>
+        </div>
+        <form class="lead-form">
+          <label>
+            Ім'я
+            <input type="text" name="name" placeholder="Ваше ім'я" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="name@example.com" required />
+          </label>
+          <label>
+            Тип маршруту
+            <select name="route-type">
+              <option>Доставка</option>
+              <option>Сервісні виїзди</option>
+              <option>Туризм</option>
+              <option>Інше</option>
+            </select>
+          </label>
+          <button class="button primary" type="submit">Надіслати заявку</button>
+          <p class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Web Site Route</span>
+      <a href="#top">Нагору</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
