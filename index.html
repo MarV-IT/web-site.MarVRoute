@@ -1,158 +1,241 @@
 <!doctype html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Web Site Route допомагає планувати маршрути, точки зупинок і графік поїздок на одній зрозумілій сторінці."
+      content="MarV Route tracks business mileage, driving costs, maintenance reminders, and accountant-ready reports."
     />
-    <title>Web Site Route | Планування маршрутів</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <title>MarV Route | Mileage and Expense Tracking</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Web Site Route home">
-        <span class="brand-mark">R</span>
-        <span>Web Site Route</span>
+      <a class="brand" href="#top" aria-label="MarV Route home">
+        <img src="assets/marv-route-icon.png" alt="" />
+        <span>MarV Route</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <nav class="site-nav" id="site-nav" aria-label="Головна навігація">
-        <a href="#features">Можливості</a>
-        <a href="#route">Приклад</a>
-        <a href="#contact">Заявка</a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#reports">Reports</a>
+        <a href="#pro">Pro</a>
+        <a href="#download">Download</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
-        <img class="hero-image" src="assets/hero-route.png" alt="Планування маршруту на ноутбуці та телефоні" />
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Розумне планування поїздок</p>
-          <h1>Маршрути, зупинки і графік в одному місці.</h1>
-          <p class="hero-copy">
-            Web Site Route допомагає швидко скласти оптимальний маршрут, побачити ключові
-            точки та передати план команді або клієнту без зайвих таблиць.
+        <div class="hero-copy">
+          <p class="eyebrow">Mileage tracking for real driving days</p>
+          <h1>Track trips, costs, and tax-ready reports without spreadsheet cleanup.</h1>
+          <p>
+            MarV Route helps drivers record business mileage, review detected trips, log fuel
+            and expenses, and export clean PDF or CSV reports for accounting.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#contact">Отримати демо</a>
-            <a class="button secondary" href="#route">Подивитись приклад</a>
+            <a class="button primary" href="#download">Get early access</a>
+            <a class="button secondary" href="#features">See what it tracks</a>
           </div>
-          <dl class="hero-stats" aria-label="Ключові показники">
-            <div>
-              <dt>32%</dt>
-              <dd>менше ручного планування</dd>
+          <div class="trust-row" aria-label="Supported setup">
+            <span>USA & Canada</span>
+            <span>Miles or kilometers</span>
+            <span>PDF & CSV export</span>
+          </div>
+        </div>
+
+        <div class="phone-stage" aria-label="MarV Route app preview">
+          <div class="phone phone-main">
+            <div class="phone-top"></div>
+            <div class="app-screen">
+              <div class="screen-header">
+                <div>
+                  <span>Today</span>
+                  <strong>MarV Route</strong>
+                </div>
+                <img src="assets/marv-route-icon.png" alt="" />
+              </div>
+              <div class="metric-grid">
+                <div>
+                  <span>Business</span>
+                  <strong>128.4 mi</strong>
+                </div>
+                <div>
+                  <span>Tax savings</span>
+                  <strong>$84.10</strong>
+                </div>
+              </div>
+              <div class="tracking-card">
+                <div class="pulse"></div>
+                <div>
+                  <strong>Tracking is active</strong>
+                  <span>Recording mileage in the background</span>
+                </div>
+              </div>
+              <div class="map-card">
+                <div class="route-dot start"></div>
+                <div class="route-path"></div>
+                <div class="route-dot end"></div>
+              </div>
+              <div class="quick-actions">
+                <button>Start trip</button>
+                <button>Add expense</button>
+              </div>
             </div>
-            <div>
-              <dt>18 хв</dt>
-              <dd>до готового маршруту</dd>
+          </div>
+
+          <div class="phone phone-secondary">
+            <div class="phone-top"></div>
+            <div class="app-screen compact">
+              <div class="report-card">
+                <span>This month</span>
+                <strong>Accountant-ready report</strong>
+                <p>Business mileage, fuel, parking, tolls, and notes.</p>
+              </div>
+              <div class="export-row">
+                <span>PDF</span>
+                <span>CSV</span>
+              </div>
+              <div class="review-card">
+                <strong>2 trips need review</strong>
+                <span>Confirm category before export.</span>
+              </div>
             </div>
-            <div>
-              <dt>24/7</dt>
-              <dd>доступ до планів</dd>
-            </div>
-          </dl>
+          </div>
         </div>
       </section>
 
       <section class="section" id="features">
         <div class="section-heading">
-          <p class="eyebrow">Що всередині</p>
-          <h2>Все потрібне для маршруту без хаосу.</h2>
+          <p class="eyebrow">Built from the app</p>
+          <h2>Everything the landing page should have talked about.</h2>
+          <p>
+            The product is not a route planner. It is a practical mileage and expense companion
+            for people who drive for work and need clean records later.
+          </p>
         </div>
         <div class="feature-grid">
           <article class="feature-card">
-            <span class="feature-icon">01</span>
-            <h3>Оптимізація точок</h3>
-            <p>Додавайте адреси, пріоритети й часові вікна, щоб швидко побудувати логічний порядок зупинок.</p>
+            <span>01</span>
+            <h3>Trip logging</h3>
+            <p>Add trips manually or use auto detection to record mileage, then classify each trip as business or personal.</p>
           </article>
           <article class="feature-card">
-            <span class="feature-icon">02</span>
-            <h3>Командний доступ</h3>
-            <p>Діліться маршрутом з водіями, менеджерами або клієнтами через один актуальний план.</p>
+            <span>02</span>
+            <h3>Review before export</h3>
+            <p>Detected trips can be marked for review so category, platform, purpose, and expenses are checked first.</p>
           </article>
           <article class="feature-card">
-            <span class="feature-icon">03</span>
-            <h3>Швидкі зміни</h3>
-            <p>Оновлюйте зупинки та дедлайни без перерахунку всього маршруту вручну.</p>
+            <span>03</span>
+            <h3>Driving costs</h3>
+            <p>Log fuel, parking, tolls, repairs, and service expenses alongside your mileage history.</p>
+          </article>
+          <article class="feature-card">
+            <span>04</span>
+            <h3>Maintenance reminders</h3>
+            <p>Keep an eye on oil changes, brake pads, odometer updates, and vehicle readiness.</p>
+          </article>
+          <article class="feature-card">
+            <span>05</span>
+            <h3>Cloud backup</h3>
+            <p>Protect mileage and expense records with backup and restore support tied to authentication.</p>
+          </article>
+          <article class="feature-card">
+            <span>06</span>
+            <h3>Localized setup</h3>
+            <p>Choose country, currency, distance unit, and language during onboarding for a cleaner first run.</p>
           </article>
         </div>
       </section>
 
-      <section class="route-band" id="route">
-        <div class="route-copy">
-          <p class="eyebrow">Приклад маршруту</p>
-          <h2>Від заявки до готового плану за кілька кроків.</h2>
+      <section class="report-section" id="reports">
+        <div class="report-copy">
+          <p class="eyebrow">Reports</p>
+          <h2>Accountant-friendly mileage and expense reports.</h2>
           <p>
-            Сервіс підходить для доставок, сервісних виїздів, локальних турів і будь-яких
-            задач, де важливо бачити маршрут, час і відповідального.
+            MarV Route turns daily driving data into simple or detailed reports with business
+            mileage, fuel summaries, parking, tolls, date ranges, and export options.
           </p>
         </div>
-        <div class="route-panel" aria-label="Приклад денного маршруту">
-          <div class="route-line"></div>
-          <div class="route-stop">
-            <strong>09:00</strong>
-            <span>Старт зі складу</span>
+        <div class="report-panel">
+          <div class="panel-header">
+            <span>Monthly close</span>
+            <strong>Ready to export</strong>
           </div>
-          <div class="route-stop">
-            <strong>10:20</strong>
-            <span>Клієнтський візит</span>
+          <div class="report-line">
+            <span>Business mileage</span>
+            <strong>842.7 mi</strong>
           </div>
-          <div class="route-stop">
-            <strong>12:10</strong>
-            <span>Проміжна зупинка</span>
+          <div class="report-line">
+            <span>Fuel cost</span>
+            <strong>$218.40</strong>
           </div>
-          <div class="route-stop">
-            <strong>15:40</strong>
-            <span>Фінальна доставка</span>
+          <div class="report-line">
+            <span>Parking & tolls</span>
+            <strong>$64.75</strong>
+          </div>
+          <div class="export-buttons">
+            <span>Export PDF</span>
+            <span>Export CSV</span>
           </div>
         </div>
       </section>
 
-      <section class="contact-section" id="contact">
+      <section class="pro-section" id="pro">
+        <div class="section-heading">
+          <p class="eyebrow">MarV Route Pro</p>
+          <h2>Cleaner reports, safer data, better cost tracking.</h2>
+        </div>
+        <div class="pro-grid">
+          <div>Unlimited PDF and CSV reports</div>
+          <div>Cloud backup</div>
+          <div>Fuel summaries in reports</div>
+          <div>Monthly close checklist</div>
+          <div>Auto trip detection</div>
+          <div>Maintenance reminders</div>
+        </div>
+      </section>
+
+      <section class="download-section" id="download">
         <div>
-          <p class="eyebrow">Старт</p>
-          <h2>Хочете спланувати перший маршрут?</h2>
-          <p>Залиште контакти, і ми підготуємо коротке демо під ваш сценарій.</p>
+          <p class="eyebrow">Early access</p>
+          <h2>Launch with a landing page that actually matches the app.</h2>
+          <p>
+            Use this page to collect tester interest while the mobile app moves toward release.
+          </p>
         </div>
         <form class="lead-form">
           <label>
-            Ім'я
-            <input type="text" name="name" placeholder="Ваше ім'я" required />
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
           </label>
           <label>
             Email
             <input type="email" name="email" placeholder="name@example.com" required />
           </label>
           <label>
-            Тип маршруту
-            <select name="route-type">
-              <option>Доставка</option>
-              <option>Сервісні виїзди</option>
-              <option>Туризм</option>
-              <option>Інше</option>
+            I drive for
+            <select name="driver-type">
+              <option>Business mileage</option>
+              <option>Delivery / rideshare</option>
+              <option>Field service</option>
+              <option>Personal expense records</option>
             </select>
           </label>
-          <button class="button primary" type="submit">Надіслати заявку</button>
+          <button class="button primary" type="submit">Join the tester list</button>
           <p class="form-message" role="status" aria-live="polite"></p>
         </form>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 Web Site Route</span>
-      <a href="#top">Нагору</a>
+      <span>© 2026 MarV Route</span>
+      <a href="#top">Back to top</a>
     </footer>
 
     <script src="script.js"></script>

@@ -18,7 +18,7 @@ siteNav.addEventListener("click", (event) => {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(form);
-  const name = data.get("name") || "Дякуємо";
-  formMessage.textContent = `${name}, заявку прийнято. Ми зв'яжемося з вами найближчим часом.`;
+  const name = data.get("name") || "Thanks";
+  formMessage.textContent = `${name}, you're on the tester list. We'll reach out with next steps.`;
   form.reset();
 });

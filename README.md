@@ -1,6 +1,6 @@
-# Web Site Route
+# MarV Route Landing Page
 
-Лендінг для сервісу планування маршрутів.
+Landing page for the MarV Route Flutter app: mileage tracking, trip review, fuel and expense logging, reports, maintenance reminders, cloud backup, and Pro features.
 
 ## Запуск
 
@@ -17,4 +17,4 @@ python -m http.server 8000
 - `index.html` - розмітка сторінки
 - `styles.css` - адаптивні стилі
 - `script.js` - меню та обробка форми
-- `assets/hero-route.png` - hero-зображення
+- `assets/marv-route-icon.png` - app icon copied from the Flutter app
