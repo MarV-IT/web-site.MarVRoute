@@ -1156,14 +1156,17 @@ select:focus {
 }
 
 .screen-frame img {
-  aspect-ratio: 360 / 760;
+  /* content-box so the 9:20 ratio applies to the image itself, not the
+     bezel — otherwise the border makes object-fit crop the sides. */
+  aspect-ratio: 9 / 20;
   background: #11181b;
   border: 8px solid #0b1417;
   border-radius: 26px;
   box-shadow: var(--shadow);
+  box-sizing: content-box;
   display: block;
   object-fit: cover;
-  width: 100%;
+  width: calc(100% - 16px);
 }
 
 .screen-frame figcaption {
@@ -1452,5 +1455,17 @@ select:focus {
   :root[data-theme="dark"] .site-nav {
     background: var(--card);
     border-color: var(--line);
+  }
+}
+
+/* ── Screens gallery: responsive (declared last so it wins the cascade) ── */
+
+@media (max-width: 980px) {
+  /* Phone screenshots are narrow — two per row stays readable. */
+  .screens-gallery {
+    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-inline: auto;
+    max-width: 620px;
   }
 }
