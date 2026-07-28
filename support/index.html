@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MarV Route support — get help with trip tracking, permissions, reports, cloud backup, and contact the team."
+    />
+    <meta name="theme-color" content="#08131d" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Support | MarV Route" />
+    <meta property="og:description" content="Help with trip tracking, reports, backup, and how to reach the MarV Route team." />
+    <meta property="og:image" content="../assets/og-image.png" />
+    <title>Support | MarV Route</title>
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        try {
+          var t = localStorage.getItem("marv-theme");
+          if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="icon" type="image/png" href="../assets/marv-route-icon.png" />
+    <link rel="apple-touch-icon" href="../assets/marv-route-icon.png" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body data-title-key="s_docTitle">
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="MarV Route home">
+        <img src="../assets/marv-route-icon.png" alt="" />
+        <span>MarV Route</span>
+      </a>
+      <a class="back-link" href="../index.html" data-i18n="backToSite">← Back to site</a>
+      <div class="header-tools">
+        <button class="icon-btn lang-toggle" type="button" aria-label="Switch language">
+          <span class="lang-current">EN</span>
+        </button>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" fill="currentColor" />
+            <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="legal support-page">
+      <p class="eyebrow" data-i18n="eyebrowSupport">Support</p>
+      <h1 data-i18n="s_title">Help with MarV Route</h1>
+      <p class="legal-updated" data-i18n="s_sub">We're a small team — real people read every message.</p>
+
+      <div class="legal-callout">
+        <strong data-i18n="s_contactTitle">📧 Contact us</strong>
+        <p class="contact-line">
+          <span data-i18n="s_emailLabel">Email:</span>
+          <a class="email-link" href="mailto:marv.labs.it@gmail.com?subject=MarV%20Route%20support">marv.labs.it@gmail.com</a>
+        </p>
+        <p data-i18n="s_reply">We aim to reply within 2–3 business days.</p>
+      </div>
+
+      <h2 data-i18n="s_aboutH">About the app</h2>
+      <p data-i18n="s_about1">
+        <strong>MarV Route</strong> is a mileage and expense tracker for people who drive for
+        work — delivery and rideshare drivers, field service techs, and anyone who needs clean
+        business-mileage records at tax time.
+      </p>
+      <p data-i18n="s_about2">
+        The app records your trips automatically in the background or manually when you tap Start
+        trip, then lets you confirm whether each trip was business or personal. Alongside mileage
+        it keeps your fuel fill-ups, parking, tolls, and repairs, estimates your deduction using
+        the built-in IRS and CRA rates, reminds you about oil changes and brake pads, and exports
+        everything as a PDF or CSV report for your accountant.
+      </p>
+      <ul data-i18n="s_aboutList">
+        <li>Available for the USA and Canada, in miles or kilometers</li>
+        <li>Six interface languages: English, Spanish, French, Russian, Ukrainian, and Dari</li>
+        <li>Light and dark theme</li>
+        <li>Optional cloud backup so your records survive a lost phone</li>
+      </ul>
+
+      <h2 data-i18n="s_qaH">Quick answers</h2>
+
+      <h3 data-i18n="s_q1H">Trips aren't being detected automatically</h3>
+      <p data-i18n="s_q1p">Automatic detection needs three things enabled on your phone:</p>
+      <ul data-i18n="s_q1list">
+        <li>Location permission set to <strong>Allow all the time</strong> (not just "while using the app")</li>
+        <li>Battery optimization turned <strong>off</strong> for MarV Route, so Android doesn't stop it in the background</li>
+        <li>Notifications allowed — the app shows one while it's monitoring</li>
+      </ul>
+      <p data-i18n="s_q1note">
+        The app has a built-in <strong>Permission check</strong> screen that tests all three and
+        tells you what's missing.
+      </p>
+
+      <h3 data-i18n="s_q2H">The recorded distance looks wrong</h3>
+      <p data-i18n="s_q2p">
+        GPS accuracy drops in tunnels, parking garages, and dense downtown areas, so a trip can
+        come out short. You can open any trip and correct the distance by hand before it goes
+        into a report.
+      </p>
+
+      <h3 data-i18n="s_q3H">How do I export a report?</h3>
+      <p data-i18n="s_q3p">
+        Open the <strong>Reports</strong> tab, pick a period (this month, last month, or a custom
+        date range), then tap <strong>Export PDF</strong> or <strong>Export CSV</strong>. The file
+        can be shared straight to email or cloud storage.
+      </p>
+
+      <h3 data-i18n="s_q4H">How do I get my data back on a new phone?</h3>
+      <p data-i18n="s_q4p">
+        If cloud backup was enabled, sign in with the same account on the new device and restore
+        from the Profile tab. Without a backup, data lives only on the old device.
+      </p>
+
+      <h3 data-i18n="s_q5H">How do I change units, currency, or language?</h3>
+      <p data-i18n="s_q5p">
+        Everything is in the <strong>Profile</strong> tab — distance unit (miles or kilometers),
+        country and currency, interface language, and theme.
+      </p>
+
+      <h3 data-i18n="s_q6H">How do I delete my data?</h3>
+      <p data-i18n="s_q6p">
+        You can delete individual trips and expenses in the app, remove your cloud backups from
+        the Profile tab, or uninstall the app to erase everything stored locally. To have your
+        account and cloud data deleted entirely, email us using the address above.
+      </p>
+
+      <h2 data-i18n="s_bugH">Reporting a bug</h2>
+      <p data-i18n="s_bugIntro">To help us fix things faster, include as much of this as you can:</p>
+      <ul data-i18n="s_bugList">
+        <li>Phone model and Android (or iOS) version</li>
+        <li>App version, shown at the bottom of the Profile tab</li>
+        <li>What you did, what you expected, and what happened instead</li>
+        <li>A screenshot, if the problem is visible on screen</li>
+      </ul>
+
+      <h2 data-i18n="s_featH">Feature requests</h2>
+      <p data-i18n="s_featBody">
+        MarV Route is still in active development and tester feedback shapes what gets built
+        next. If something is missing from your workflow, write to us — those messages genuinely
+        change the roadmap.
+      </p>
+
+      <p class="legal-back">
+        <a href="../index.html" data-i18n="backHome">← Back to MarV Route</a>
+        <a href="../privacy/index.html" data-i18n="toPrivacy">Privacy Policy →</a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img src="../assets/marv-route-icon.png" alt="" />
+        <span>© 2026 MarV Route</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="../index.html" data-i18n="footerHome">Home</a>
+        <a href="../index.html#faq" data-i18n="footerFaq">FAQ</a>
+        <a href="../privacy/index.html" data-i18n="footerPrivacy">Privacy</a>
+      </nav>
+    </footer>
+
+    <script src="../legal.js"></script>
+  </body>
+</html>

@@ -1,13 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="MarV Route tracks business mileage, driving costs, maintenance reminders, and accountant-ready reports."
+      data-i18n="metaDescription"
+      content="MarV Route automatically tracks business mileage, estimates your tax deduction, logs fuel and expenses, and exports accountant-ready PDF and CSV reports."
     />
+    <meta name="theme-color" content="#08131d" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MarV Route — Mileage & Expense Tracking" />
+    <meta
+      property="og:description"
+      content="Automatic trip detection, tax-ready mileage reports, fuel and expense logging, and maintenance reminders for drivers in the USA and Canada."
+    />
+    <meta property="og:image" content="assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MarV Route — Mileage & Expense Tracking" />
+    <meta
+      name="twitter:description"
+      content="Automatic trip detection, tax-ready mileage reports, fuel and expense logging for drivers in the USA and Canada."
+    />
+    <meta name="twitter:image" content="assets/og-image.png" />
+    <link rel="icon" type="image/png" href="assets/marv-route-icon.png" />
+    <link rel="apple-touch-icon" href="assets/marv-route-icon.png" />
     <title>MarV Route | Mileage and Expense Tracking</title>
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        try {
+          var t = localStorage.getItem("marv-theme");
+          if (!t) {
+            t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          }
+          d.setAttribute("data-theme", t);
+          var l = localStorage.getItem("marv-lang");
+          if (l) d.setAttribute("lang", l);
+        } catch (e) {}
+      })();
+    </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -16,94 +51,200 @@
         <img src="assets/marv-route-icon.png" alt="" />
         <span>MarV Route</span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header-tools">
+        <button class="icon-btn lang-toggle" type="button" aria-label="Switch language">
+          <span class="lang-current">EN</span>
+        </button>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" fill="currentColor" />
+            <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor" />
+          </svg>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a href="#features">Features</a>
-        <a href="#reports">Reports</a>
-        <a href="#pro">Pro</a>
-        <a href="#download">Download</a>
+        <a href="#features" data-i18n="navFeatures">Features</a>
+        <a href="#how-it-works" data-i18n="navHow">How it works</a>
+        <a href="#screens" data-i18n="navScreens">Screens</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+        <a class="nav-cta" href="#download" data-i18n="navCta">Get early access</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Mileage tracking for real driving days</p>
-          <h1>Track trips, costs, and tax-ready reports without spreadsheet cleanup.</h1>
-          <p>
-            MarV Route helps drivers record business mileage, review detected trips, log fuel
-            and expenses, and export clean PDF or CSV reports for accounting.
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="heroEyebrow">Mileage tracking for real driving days</p>
+          <h1 data-i18n="heroTitle">Every business mile logged. Every deduction counted.</h1>
+          <p data-i18n="heroBody">
+            MarV Route detects your trips automatically, estimates your mileage deduction with
+            built-in IRS and CRA rates, logs fuel and driving costs, and exports clean PDF or
+            CSV reports your accountant will actually like.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#download">Get early access</a>
-            <a class="button secondary" href="#features">See what it tracks</a>
+            <a class="button primary" href="#download" data-i18n="heroCtaPrimary">Get early access</a>
+            <a class="button secondary" href="#features" data-i18n="heroCtaSecondary">See what it tracks</a>
+          </div>
+          <div class="store-badges" aria-label="App stores">
+            <a class="store-badge" href="#download">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.7c0-2 1.6-3 1.7-3-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.3 0-2.6.8-3.3 2-1.4 2.4-.4 6 1 8 .6 1 1.4 2.1 2.4 2 1-.04 1.3-.6 2.5-.6s1.5.6 2.5.6c1 0 1.7-1 2.3-2 .7-1.1 1-2.2 1-2.3 0 0-1.9-.8-2-3.2zM14.6 6.3c.5-.7.9-1.6.8-2.6-.8 0-1.8.5-2.4 1.2-.5.6-.9 1.5-.8 2.5.9.07 1.8-.4 2.4-1.1z" fill="currentColor" /></svg>
+              <span><small data-i18n="storeSoon">Coming soon on</small><strong>App Store</strong></span>
+            </a>
+            <a class="store-badge" href="#download">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.2v17.6c0 .5.5.8.9.5l9.3-5.8-2.8-2.8L4 3.2zm10.5 6.7L17.8 8l2.6 1.6c.6.4.6 1.4 0 1.8L17.8 13l-3.3-2-2.4 2.4 2.4-2.4zM5.4 2.7l8.2 8.2-2.4 2.4L5.4 21.3c-.2.1-.5 0-.5-.3V3c0-.3.3-.4.5-.3z" fill="currentColor" /></svg>
+              <span><small data-i18n="storeSoon">Coming soon on</small><strong>Google Play</strong></span>
+            </a>
           </div>
           <div class="trust-row" aria-label="Supported setup">
-            <span>USA & Canada</span>
-            <span>Miles or kilometers</span>
-            <span>PDF & CSV export</span>
+            <span data-i18n="trustRegion">USA &amp; Canada</span>
+            <span data-i18n="trustUnit">Miles or kilometers</span>
+            <span data-i18n="trustLang">6 languages</span>
+            <span data-i18n="trustExport">PDF &amp; CSV export</span>
           </div>
         </div>
 
-        <div class="phone-stage" aria-label="MarV Route app preview">
+        <div class="phone-stage reveal" aria-label="MarV Route app preview">
           <div class="phone phone-main">
             <div class="phone-top"></div>
-            <div class="app-screen">
-              <div class="screen-header">
-                <div>
-                  <span>Today</span>
-                  <strong>MarV Route</strong>
+            <div class="m3-screen">
+              <div class="m3-appbar">Home</div>
+              <div class="m3-card m3-detect">
+                <div class="m3-detect-top">
+                  <svg class="m3-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.7" />
+                    <circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="1.7" />
+                    <circle cx="12" cy="12" r="1.7" fill="currentColor" />
+                    <path d="M12 12l5.4-5.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                  </svg>
+                  <span class="m3-circle-btn" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="2" fill="currentColor" />
+                      <path d="M8.2 8.2a5.4 5.4 0 0 0 0 7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                    </svg>
+                  </span>
                 </div>
-                <img src="assets/marv-route-icon.png" alt="" />
+                <strong>Auto Trip Detection</strong>
+                <span class="m3-sub">Watching for movement…</span>
               </div>
-              <div class="metric-grid">
-                <div>
-                  <span>Business</span>
-                  <strong>128.4 mi</strong>
+              <div class="m3-card">
+                <strong class="m3-card-title">Quick actions</strong>
+                <div class="m3-actions">
+                  <button type="button" class="m3-btn filled">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor" /></svg>
+                    Start trip
+                  </button>
+                  <button type="button" class="m3-btn outlined">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+                    Add manually
+                  </button>
+                  <button type="button" class="m3-btn outlined">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M6.5 3.5h11V20l-1.9-1.4L13.8 20l-1.8-1.4L10.2 20l-1.8-1.4L6.5 20V3.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                      <path d="M9.5 8.5h5M9.5 12h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                    </svg>
+                    Add expense
+                  </button>
                 </div>
-                <div>
-                  <span>Tax savings</span>
-                  <strong>$84.10</strong>
+              </div>
+              <div class="m3-card m3-fuel">
+                <span class="m3-fuel-tile" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="6" y="4.5" width="8" height="15" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M8.5 7.5h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                    <path d="M14 10.5h1.6l1.9 2v4.2a1.4 1.4 0 0 1-2.8 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <div class="m3-row-text">
+                  <strong>Fuel Log</strong>
+                  <span class="m3-sub">Add Fuel</span>
                 </div>
+                <svg class="m3-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
               </div>
-              <div class="tracking-card">
-                <div class="pulse"></div>
-                <div>
-                  <strong>Tracking is active</strong>
-                  <span>Recording mileage in the background</span>
-                </div>
+              <div class="m3-chips" aria-hidden="true">
+                <span class="selected">
+                  <svg viewBox="0 0 24 24"><path d="M5 13l4 4 9.5-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  Today
+                </span>
+                <span>This week</span>
+                <span>This month</span>
               </div>
-              <div class="map-card">
-                <div class="route-dot start"></div>
-                <div class="route-path"></div>
-                <div class="route-dot end"></div>
+              <div class="m3-card">
+                <span class="m3-label">Mileage today</span>
+                <strong class="m3-value">55.3 mi</strong>
+                <span class="m3-sub">Trips recorded: 5</span>
               </div>
-              <div class="quick-actions">
-                <button>Start trip</button>
-                <button>Add expense</button>
-              </div>
+              <nav class="m3-nav" aria-hidden="true">
+                <span class="active">
+                  <i><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5.5v-5.5h-5V20H4v-9z" fill="currentColor" /></svg></i>
+                  Home
+                </span>
+                <span>
+                  <i><svg viewBox="0 0 24 24">
+                    <circle cx="8" cy="5.5" r="1.9" fill="currentColor" />
+                    <circle cx="16" cy="18.5" r="1.9" fill="currentColor" />
+                    <path d="M8 7.5v5a4 4 0 0 0 8 0v4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" />
+                  </svg></i>
+                  Trips
+                </span>
+                <span>
+                  <i><svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="8.6" fill="none" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M12 8.2v7.6M8.2 12h7.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                  </svg></i>
+                  Add
+                </span>
+                <span>
+                  <i><svg viewBox="0 0 24 24"><path d="M5.5 20v-7M12 20V5.5M18.5 20v-9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" /></svg></i>
+                  Reports
+                </span>
+                <span>
+                  <i><svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="3.4" fill="none" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M5.2 19.5c1.5-3.3 3.9-4.8 6.8-4.8s5.3 1.5 6.8 4.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                  </svg></i>
+                  Profile
+                </span>
+              </nav>
             </div>
           </div>
 
           <div class="phone phone-secondary">
             <div class="phone-top"></div>
-            <div class="app-screen compact">
-              <div class="report-card">
-                <span>This month</span>
-                <strong>Accountant-ready report</strong>
-                <p>Business mileage, fuel, parking, tolls, and notes.</p>
+            <div class="m3-screen m3-compact">
+              <div class="m3-appbar">Reports</div>
+              <span class="m3-section-label">Report period</span>
+              <div class="m3-segmented" aria-hidden="true">
+                <span class="selected">
+                  <svg viewBox="0 0 24 24"><path d="M5 13l4 4 9.5-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  This month
+                </span>
+                <span>Last month</span>
+                <span>Custom</span>
               </div>
-              <div class="export-row">
-                <span>PDF</span>
-                <span>CSV</span>
+              <div class="m3-card">
+                <span class="m3-label">This month</span>
+                <strong class="m3-value">336.0 mi</strong>
+                <span class="m3-sub">Business: 302.2 mi</span>
               </div>
-              <div class="review-card">
-                <strong>2 trips need review</strong>
-                <span>Confirm category before export.</span>
+              <div class="m3-card">
+                <span class="m3-label">Expenses</span>
+                <strong class="m3-value">USD 0.00</strong>
+                <span class="m3-sub">Fuel, parking, tolls</span>
+              </div>
+              <div class="m3-card">
+                <span class="m3-label">Fuel summary</span>
+                <div class="m3-line"><span>Fuel cost</span><span>USD 0.00</span></div>
+                <div class="m3-line"><span>Fuel amount</span><span>0.0 gal</span></div>
+                <div class="m3-line"><span>Average fuel price</span><span>N/A</span></div>
+                <div class="m3-line"><span>Cost per mile</span><span>USD 0.00</span></div>
               </div>
             </div>
           </div>
@@ -111,131 +252,261 @@
       </section>
 
       <section class="section" id="features">
-        <div class="section-heading">
-          <p class="eyebrow">Built from the app</p>
-          <h2>Everything the landing page should have talked about.</h2>
-          <p>
-            The product is not a route planner. It is a practical mileage and expense companion
-            for people who drive for work and need clean records later.
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="featuresEyebrow">What it tracks</p>
+          <h2 data-i18n="featuresTitle">A complete record of your driving — not just a route on a map.</h2>
+          <p data-i18n="featuresBody">
+            MarV Route is a mileage and expense companion for people who drive for work:
+            delivery, rideshare, field service, or plain business miles that need clean
+            records at tax time.
           </p>
         </div>
         <div class="feature-grid">
-          <article class="feature-card">
+          <article class="feature-card reveal">
             <span>01</span>
-            <h3>Trip logging</h3>
-            <p>Add trips manually or use auto detection to record mileage, then classify each trip as business or personal.</p>
+            <h3 data-i18n="feat1Title">Automatic trip detection</h3>
+            <p data-i18n="feat1Body">Drive as usual — trips are detected and recorded in the background, with live tracking you can start manually any time.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card reveal">
             <span>02</span>
-            <h3>Review before export</h3>
-            <p>Detected trips can be marked for review so category, platform, purpose, and expenses are checked first.</p>
+            <h3 data-i18n="feat2Title">Review before export</h3>
+            <p data-i18n="feat2Body">Detected trips land in a review inbox so you confirm business or personal, purpose, and platform before anything reaches a report.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card reveal">
             <span>03</span>
-            <h3>Driving costs</h3>
-            <p>Log fuel, parking, tolls, repairs, and service expenses alongside your mileage history.</p>
+            <h3 data-i18n="feat3Title">Work Mode</h3>
+            <p data-i18n="feat3Body">Set your work shifts once, and every trip driven during a shift is classified as business automatically.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card reveal">
             <span>04</span>
-            <h3>Maintenance reminders</h3>
-            <p>Keep an eye on oil changes, brake pads, odometer updates, and vehicle readiness.</p>
+            <h3 data-i18n="feat4Title">Tax estimates built in</h3>
+            <p data-i18n="feat4Body">Deductions are calculated as you drive using the IRS standard mileage rate and CRA's tiered per-kilometer rates.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card reveal">
             <span>05</span>
-            <h3>Cloud backup</h3>
-            <p>Protect mileage and expense records with backup and restore support tied to authentication.</p>
+            <h3 data-i18n="feat5Title">Fuel &amp; driving costs</h3>
+            <p data-i18n="feat5Body">Log fuel fill-ups, parking, tolls, repairs, and service expenses alongside your mileage history.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card reveal">
             <span>06</span>
-            <h3>Localized setup</h3>
-            <p>Choose country, currency, distance unit, and language during onboarding for a cleaner first run.</p>
+            <h3 data-i18n="feat6Title">Maintenance reminders</h3>
+            <p data-i18n="feat6Body">Track oil changes and brake pads against your odometer so the car that earns is also the car that's ready.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span>07</span>
+            <h3 data-i18n="feat7Title">Cloud backup</h3>
+            <p data-i18n="feat7Body">Daily automatic backup tied to your account, with restore on a fresh install — your records survive a lost phone.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span>08</span>
+            <h3 data-i18n="feat8Title">Localized setup</h3>
+            <p data-i18n="feat8Body">English, Spanish, French, Russian, Ukrainian, and Dari. Miles or kilometers, your currency, light or dark theme.</p>
           </article>
         </div>
       </section>
 
-      <section class="report-section" id="reports">
-        <div class="report-copy">
-          <p class="eyebrow">Reports</p>
-          <h2>Accountant-friendly mileage and expense reports.</h2>
-          <p>
-            MarV Route turns daily driving data into simple or detailed reports with business
-            mileage, fuel summaries, parking, tolls, date ranges, and export options.
+      <section class="section how-section" id="how-it-works">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="howEyebrow">How it works</p>
+          <h2 data-i18n="howTitle">Drive. Review. Export. Done.</h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal">
+            <span class="step-number">1</span>
+            <h3 data-i18n="how1Title">Drive</h3>
+            <p data-i18n="how1Body">Auto detection records your trips in the background — or tap Start trip for live tracking with a map.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-number">2</span>
+            <h3 data-i18n="how2Title">Review</h3>
+            <p data-i18n="how2Body">Swipe through the review inbox: business or personal, platform, purpose. Work Mode handles most of it for you.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-number">3</span>
+            <h3 data-i18n="how3Title">Export</h3>
+            <p data-i18n="how3Body">Pick a date range and send a PDF or CSV with mileage, fuel, parking, and tolls straight to your accountant.</p>
+          </li>
+        </ol>
+        <div class="rate-strip reveal" aria-label="Built-in mileage rates">
+          <div>
+            <span data-i18n="rateUsa">USA · IRS rate</span>
+            <strong>$0.725 / mile</strong>
+          </div>
+          <div>
+            <span data-i18n="rateCanada">Canada · CRA rate</span>
+            <strong>$0.73 / km <em data-i18n="rateCanadaNote">first 5,000 km, then $0.67</em></strong>
+          </div>
+          <p data-i18n="rateNote">Rates are built into the app, so your tax estimate updates with every trip.</p>
+        </div>
+      </section>
+
+      <section class="section screens-section" id="screens">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="screensEyebrow">Inside the app</p>
+          <h2 data-i18n="screensTitle">Real screens, real driving data.</h2>
+          <p data-i18n="screensBody">
+            A clean Material You interface in light or dark theme — built for quick taps between
+            trips, not spreadsheets.
           </p>
         </div>
-        <div class="report-panel">
+        <div class="screens-gallery">
+          <figure class="screen-frame reveal">
+            <img src="assets/screens/home.png" alt="MarV Route Home screen" loading="lazy" />
+            <figcaption data-i18n="screenHome">Home dashboard</figcaption>
+          </figure>
+          <figure class="screen-frame reveal">
+            <img src="assets/screens/trips.png" alt="MarV Route Trips screen" loading="lazy" />
+            <figcaption data-i18n="screenTrips">Trip history</figcaption>
+          </figure>
+          <figure class="screen-frame reveal">
+            <img src="assets/screens/reports.png" alt="MarV Route Reports screen" loading="lazy" />
+            <figcaption data-i18n="screenReports">Reports &amp; export</figcaption>
+          </figure>
+          <figure class="screen-frame reveal">
+            <img src="assets/screens/add-trip.png" alt="MarV Route Add trip screen" loading="lazy" />
+            <figcaption data-i18n="screenAdd">Add a trip</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="report-section" id="reports">
+        <div class="report-copy reveal">
+          <p class="eyebrow" data-i18n="reportsEyebrow">Reports</p>
+          <h2 data-i18n="reportsTitle">Accountant-friendly mileage and expense reports.</h2>
+          <p data-i18n="reportsBody">
+            MarV Route turns daily driving data into simple or detailed reports with business
+            mileage, tax estimates, fuel summaries, parking, tolls, custom date ranges, and
+            one-tap PDF or CSV export.
+          </p>
+        </div>
+        <div class="report-panel reveal">
           <div class="panel-header">
-            <span>Monthly close</span>
-            <strong>Ready to export</strong>
+            <span data-i18n="reportPanelMonth">Monthly close</span>
+            <strong data-i18n="reportPanelReady">Ready to export</strong>
           </div>
           <div class="report-line">
-            <span>Business mileage</span>
+            <span data-i18n="reportLineMileage">Business mileage</span>
             <strong>842.7 mi</strong>
           </div>
           <div class="report-line">
-            <span>Fuel cost</span>
+            <span data-i18n="reportLineTax">Tax estimate</span>
+            <strong>$610.96</strong>
+          </div>
+          <div class="report-line">
+            <span data-i18n="reportLineFuel">Fuel cost</span>
             <strong>$218.40</strong>
           </div>
           <div class="report-line">
-            <span>Parking & tolls</span>
+            <span data-i18n="reportLineParking">Parking &amp; tolls</span>
             <strong>$64.75</strong>
           </div>
           <div class="export-buttons">
-            <span>Export PDF</span>
-            <span>Export CSV</span>
+            <span data-i18n="exportPdf">Export PDF</span>
+            <span data-i18n="exportCsv">Export CSV</span>
           </div>
         </div>
       </section>
 
       <section class="pro-section" id="pro">
-        <div class="section-heading">
-          <p class="eyebrow">MarV Route Pro</p>
-          <h2>Cleaner reports, safer data, better cost tracking.</h2>
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="proEyebrow">MarV Route Pro</p>
+          <h2 data-i18n="proTitle">Cleaner reports, safer data, better cost tracking.</h2>
+          <p data-i18n="proBody">Everything in the free app, plus the tools that make monthly close effortless.</p>
         </div>
         <div class="pro-grid">
-          <div>Unlimited PDF and CSV reports</div>
-          <div>Cloud backup</div>
-          <div>Fuel summaries in reports</div>
-          <div>Monthly close checklist</div>
-          <div>Auto trip detection</div>
-          <div>Maintenance reminders</div>
+          <div class="reveal" data-i18n="pro1">Unlimited PDF and CSV reports</div>
+          <div class="reveal" data-i18n="pro2">Cloud backup</div>
+          <div class="reveal" data-i18n="pro3">Fuel summaries in reports</div>
+          <div class="reveal" data-i18n="pro4">Monthly close checklist</div>
+          <div class="reveal" data-i18n="pro5">Auto trip detection</div>
+          <div class="reveal" data-i18n="pro6">Maintenance reminders</div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="faqEyebrow">FAQ</p>
+          <h2 data-i18n="faqTitle">Questions drivers ask before installing.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary data-i18n="faqQ1">Does trip detection drain my battery?</summary>
+            <p data-i18n="faqA1">Auto detection uses Android's low-power location and only wakes up when you actually start moving. You can also leave it off and tap Start trip when you drive — your call.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary data-i18n="faqQ2">Is my driving data private?</summary>
+            <p data-i18n="faqA2">Your trips and expenses are stored on your device. Cloud backup is optional and tied to your own account — we don't sell or share your data, and routes never go to advertisers.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary data-i18n="faqQ3">Does it work offline?</summary>
+            <p data-i18n="faqA3">Yes. Tracking, logging, and reports all work without a connection. Cloud backup simply syncs the next time you're online.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary data-i18n="faqQ4">Which mileage rates does it use?</summary>
+            <p data-i18n="faqA4">The US IRS standard rate ($0.725/mile) and Canada's CRA tiered rate ($0.73/km for the first 5,000 km, then $0.67). Estimates update automatically as you drive.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary data-i18n="faqQ5">How much will Pro cost?</summary>
+            <p data-i18n="faqA5">Pricing isn't final yet. The core app — tracking, manual trips, and basic reports — stays free. Early testers will hear about Pro plans first.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary data-i18n="faqQ6">When does it launch?</summary>
+            <p data-i18n="faqA6">The app is in active testing now. Join the tester list below and we'll send you a build for your phone as soon as it's ready.</p>
+          </details>
         </div>
       </section>
 
       <section class="download-section" id="download">
-        <div>
-          <p class="eyebrow">Early access</p>
-          <h2>Launch with a landing page that actually matches the app.</h2>
-          <p>
-            Use this page to collect tester interest while the mobile app moves toward release.
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="downloadEyebrow">Early access</p>
+          <h2 data-i18n="downloadTitle">Be first in line when MarV Route launches.</h2>
+          <p data-i18n="downloadBody">
+            The mobile app is moving toward release. Join the tester list and we'll reach out
+            with a build for your phone — and your feedback will shape what ships.
           </p>
         </div>
-        <form class="lead-form">
+        <form class="lead-form reveal" novalidate>
           <label>
-            Name
-            <input type="text" name="name" placeholder="Your name" required />
+            <span data-i18n="formName">Name</span>
+            <input type="text" name="name" data-i18n-ph="formNamePh" placeholder="Your name" required />
           </label>
           <label>
-            Email
-            <input type="email" name="email" placeholder="name@example.com" required />
+            <span data-i18n="formEmail">Email</span>
+            <input type="email" name="email" data-i18n-ph="formEmailPh" placeholder="name@example.com" required />
           </label>
           <label>
-            I drive for
+            <span data-i18n="formDrive">I drive for</span>
             <select name="driver-type">
-              <option>Business mileage</option>
-              <option>Delivery / rideshare</option>
-              <option>Field service</option>
-              <option>Personal expense records</option>
+              <option data-i18n="formOpt1">Business mileage</option>
+              <option data-i18n="formOpt2">Delivery / rideshare</option>
+              <option data-i18n="formOpt3">Field service</option>
+              <option data-i18n="formOpt4">Personal expense records</option>
             </select>
           </label>
-          <button class="button primary" type="submit">Join the tester list</button>
+          <label class="consent">
+            <input type="checkbox" name="consent" required />
+            <span data-i18n="formConsent">I agree to be contacted about MarV Route early access. See our <a href="privacy/index.html">Privacy Policy</a>.</span>
+          </label>
+          <button class="button primary" type="submit" data-i18n="formSubmit">Join the tester list</button>
           <p class="form-message" role="status" aria-live="polite"></p>
         </form>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 MarV Route</span>
-      <a href="#top">Back to top</a>
+      <div class="footer-brand">
+        <img src="assets/marv-route-icon.png" alt="" />
+        <span>© 2026 MarV Route</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#features" data-i18n="navFeatures">Features</a>
+        <a href="#screens" data-i18n="navScreens">Screens</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+        <a href="support/index.html" data-i18n="footerSupport">Support</a>
+        <a href="privacy/index.html" data-i18n="footerPrivacy">Privacy</a>
+        <a href="mailto:marv.labs.it@gmail.com">marv.labs.it@gmail.com</a>
+        <a href="#top" data-i18n="footerTop">Back to top</a>
+      </nav>
     </footer>
 
     <script src="script.js"></script>

@@ -2,3 +2,6 @@
 Thumbs.db
 *.log
 preview*.png
+
+# Local dev tooling (preview server config)
+.claude/
