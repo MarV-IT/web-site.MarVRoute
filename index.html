@@ -477,11 +477,12 @@
           </label>
           <label>
             <span data-i18n="formDrive">I drive for</span>
+            <!-- Stable values so the stored answer doesn't change with the UI language. -->
             <select name="driver-type">
-              <option data-i18n="formOpt1">Business mileage</option>
-              <option data-i18n="formOpt2">Delivery / rideshare</option>
-              <option data-i18n="formOpt3">Field service</option>
-              <option data-i18n="formOpt4">Personal expense records</option>
+              <option value="business" data-i18n="formOpt1">Business mileage</option>
+              <option value="delivery" data-i18n="formOpt2">Delivery / rideshare</option>
+              <option value="field-service" data-i18n="formOpt3">Field service</option>
+              <option value="personal" data-i18n="formOpt4">Personal expense records</option>
             </select>
           </label>
           <!-- Spam trap: hidden from people, irresistible to bots. -->
