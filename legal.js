@@ -21,7 +21,7 @@ const legalI18n = {
     p_title: "Privacy Policy",
     p_effective: "Effective date: July 27, 2026",
     p_intro:
-      'MarV Route ("we", "our", or "us") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application.',
+      "MarV Route respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application.",
     p_calloutTitle: "📍 Background location notice",
     p_calloutBody:
       "MarV Route collects location data to record your trips, and can do so <strong>in the background</strong> — including when the app is closed or not in use — but only while you have trip tracking or automatic trip detection switched on. This data is used solely to measure and save <em>your own</em> trips inside the app. It is never sold, and it is not used for advertising or cross-app tracking. You can turn tracking off at any time in the app or in your device settings.",
@@ -78,7 +78,7 @@ const legalI18n = {
     p_8list:
       "<li>Delete your data from the app</li><li>Stop location tracking at any time</li><li>Uninstall the app to remove all data</li><li>Request deletion of your account and any cloud backups by contacting us</li><li>Request a copy of the personal data associated with your account</li>",
     p_8note:
-      "Depending on where you live (for example the EU/EEA, the United Kingdom, California, or Canada), you may have additional rights to access, correct, port, or erase your personal data. Contact us using the details below and we will respond as required by applicable law.",
+      "Depending on where you live (the USA, Canada, the EU, and others), you may have additional rights to access, correct, port, or erase your personal data. Contact us using the details below and we will respond as required by applicable law.",
 
     p_h9: "9. Children's Privacy",
     p_9body:
@@ -113,7 +113,7 @@ const legalI18n = {
     s_q1H: "Trips aren't being detected automatically",
     s_q1p: "Automatic detection needs three things enabled on your phone:",
     s_q1list:
-      '<li>Location permission set to <strong>Allow all the time</strong> (not just "while using the app")</li><li>Battery optimization turned <strong>off</strong> for MarV Route, so Android doesn\'t stop it in the background</li><li>Notifications allowed — the app shows one while it\'s monitoring</li>',
+      '<li>Location permission set to <strong>Allow all the time</strong> (not just "while using the app")</li><li>Battery optimization turned <strong>off</strong> for MarV Route, so Android doesn\'t stop it in the background</li><li>Notifications allowed — while the app is watching for trips, it shows a persistent notification</li>',
     s_q1note:
       "The app has a built-in <strong>Permission check</strong> screen that tests all three and tells you what's missing.",
     s_q2H: "The recorded distance looks wrong",
@@ -158,7 +158,7 @@ const legalI18n = {
     p_title: "Політика конфіденційності",
     p_effective: "Дата набрання чинності: 27 липня 2026",
     p_intro:
-      "MarV Route («ми», «наш» або «нас») поважає вашу приватність і зобовʼязується захищати ваші персональні дані. Ця Політика конфіденційності пояснює, як ми збираємо, використовуємо та захищаємо вашу інформацію, коли ви користуєтеся нашим мобільним додатком.",
+      "MarV Route поважає вашу приватність і зобовʼязується захищати ваші персональні дані. Ця Політика конфіденційності пояснює, як ми збираємо, використовуємо та захищаємо вашу інформацію, коли ви користуєтеся нашим мобільним додатком.",
     p_calloutTitle: "📍 Повідомлення про геолокацію у фоні",
     p_calloutBody:
       "MarV Route збирає дані геолокації, щоб записувати ваші поїздки, і може робити це <strong>у фоновому режимі</strong> — зокрема коли додаток закритий або не використовується — але лише поки увімкнено відстеження поїздок чи автоматичне виявлення поїздок. Ці дані використовуються виключно для вимірювання та збереження <em>ваших власних</em> поїздок у додатку. Ми ніколи їх не продаємо і не використовуємо для реклами чи стеження між додатками. Ви можете вимкнути відстеження будь-коли — у додатку або в налаштуваннях пристрою.",
@@ -215,7 +215,7 @@ const legalI18n = {
     p_8list:
       "<li>Видалити свої дані з додатку</li><li>Будь-коли зупинити відстеження геолокації</li><li>Видалити додаток, щоб стерти всі дані</li><li>Звернутися до нас із запитом на видалення облікового запису та всіх хмарних копій</li><li>Запитати копію персональних даних, повʼязаних з вашим обліковим записом</li>",
     p_8note:
-      "Залежно від того, де ви проживаєте (наприклад, ЄС/ЄЕЗ, Велика Британія, Каліфорнія чи Канада), ви можете мати додаткові права на доступ, виправлення, перенесення або стирання ваших персональних даних. Звертайтеся до нас за контактами нижче — ми відповімо у порядку, передбаченому чинним законодавством.",
+      "Залежно від того, де ви проживаєте (США, Канада, ЄС та інші), ви можете мати додаткові права на доступ, виправлення, перенесення або стирання ваших персональних даних. Звертайтеся до нас за контактами нижче — ми відповімо у порядку, передбаченому чинним законодавством.",
 
     p_h9: "9. Конфіденційність дітей",
     p_9body:
@@ -250,7 +250,7 @@ const legalI18n = {
     s_q1H: "Поїздки не визначаються автоматично",
     s_q1p: "Для автоматичного визначення на телефоні мають бути ввімкнені три речі:",
     s_q1list:
-      "<li>Дозвіл геолокації — <strong>«Дозволяти завжди»</strong> (а не лише «під час використання додатка»)</li><li>Оптимізацію батареї для MarV Route <strong>вимкнено</strong>, щоб Android не зупиняв додаток у фоні</li><li>Сповіщення дозволено — додаток показує одне, поки веде спостереження</li>",
+      "<li>Дозвіл геолокації — <strong>«Дозволяти завжди»</strong> (а не лише «під час використання додатка»)</li><li>Оптимізацію батареї для MarV Route <strong>вимкнено</strong>, щоб Android не зупиняв додаток у фоні</li><li>Сповіщення дозволено — поки додаток стежить за поїздками, він показує постійне сповіщення</li>",
     s_q1note:
       "У додатку є вбудований екран <strong>перевірки дозволів</strong>, який перевіряє всі три пункти й показує, чого бракує.",
     s_q2H: "Записана дистанція виглядає неправильною",
