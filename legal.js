@@ -283,6 +283,30 @@ const legalI18n = {
 const LEGAL_LANGS = ["en", "uk"];
 let legalLang = "en";
 
+// Links use clean paths ("../", "../support/"), which a server resolves to the
+// folder's index.html. Opening from disk has no server to do that, so point
+// those links at the file itself.
+function fixFileProtocolLinks() {
+  if (location.protocol !== "file:") return;
+  document.querySelectorAll("a[href]").forEach((a) => {
+    const href = a.getAttribute("href");
+    if (/^[a-z]+:/i.test(href)) return; // mailto:, https:, …
+    const parts = href.match(/^([^#?]*\/)([#?].*)?$/);
+    if (parts) a.setAttribute("href", parts[1] + "index.html" + (parts[2] || ""));
+  });
+}
+
+// Drop a trailing /index.html from the address bar without reloading.
+function canonicalizeUrl() {
+  if (location.protocol.indexOf("http") !== 0) return;
+  if (!/\/index\.html$/.test(location.pathname)) return;
+  history.replaceState(
+    null,
+    "",
+    location.pathname.replace(/index\.html$/, "") + location.search + location.hash
+  );
+}
+
 function applyLegalLanguage(lang) {
   legalLang = LEGAL_LANGS.indexOf(lang) !== -1 ? lang : "en";
   const t = Object.assign({}, legalI18n.en, legalI18n[legalLang] || {});
@@ -304,6 +328,8 @@ function applyLegalLanguage(lang) {
   const label = document.querySelector(".lang-current");
   if (label) label.textContent = legalLang.toUpperCase();
 
+  fixFileProtocolLinks();
+
   try {
     localStorage.setItem("marv-lang", legalLang);
   } catch (e) {}
@@ -320,6 +346,8 @@ function applyLegalTheme(theme) {
 }
 
 (function initLegal() {
+  canonicalizeUrl();
+
   let savedLang = null;
   try {
     savedLang = localStorage.getItem("marv-lang");

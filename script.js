@@ -144,7 +144,7 @@ const i18n = {
     formOpt3: "Field service",
     formOpt4: "Personal expense records",
     formConsent:
-      'I agree to be emailed when MarV Route launches. See our <a href="privacy/index.html">Privacy Policy</a>.',
+      'I agree to be emailed when MarV Route launches. See our <a href="privacy/">Privacy Policy</a>.',
     formSubmit: "Notify me at launch",
     footerSupport: "Support",
     footerPrivacy: "Privacy",
@@ -279,7 +279,7 @@ const i18n = {
     formOpt3: "Виїзні послуги",
     formOpt4: "Облік особистих витрат",
     formConsent:
-      'Я погоджуюся отримати лист, коли MarV Route вийде. Див. нашу <a href="privacy/index.html">Політику конфіденційності</a>.',
+      'Я погоджуюся отримати лист, коли MarV Route вийде. Див. нашу <a href="privacy/">Політику конфіденційності</a>.',
     formSubmit: "Повідомити про запуск",
     footerSupport: "Підтримка",
     footerPrivacy: "Конфіденційність",
@@ -329,10 +329,39 @@ function applyLanguage(lang) {
 
   // The form message is generated, not marked up — re-render it by hand.
   renderFormMessage();
+  fixFileProtocolLinks();
 
   try {
     localStorage.setItem("marv-lang", currentLang);
   } catch (e) {}
+}
+
+// ─── URL hygiene ─────────────────────────────────────────────────────────────
+
+// Links point at clean paths ("privacy/"), which a web server resolves to the
+// folder's index.html. Opening the site straight from disk has no server to do
+// that, so rewrite those links to the file itself. Runs after every render,
+// because translated strings can re-inject links.
+function fixFileProtocolLinks() {
+  if (location.protocol !== "file:") return;
+  document.querySelectorAll("a[href]").forEach((a) => {
+    const href = a.getAttribute("href");
+    if (/^[a-z]+:/i.test(href)) return; // mailto:, https:, …
+    const parts = href.match(/^([^#?]*\/)([#?].*)?$/);
+    if (parts) a.setAttribute("href", parts[1] + "index.html" + (parts[2] || ""));
+  });
+}
+
+// Someone arriving at /index.html (old bookmark, shared link) sees the tidy
+// path instead. replaceState, so no reload and no extra history entry.
+function canonicalizeUrl() {
+  if (location.protocol.indexOf("http") !== 0) return;
+  if (!/\/index\.html$/.test(location.pathname)) return;
+  history.replaceState(
+    null,
+    "",
+    location.pathname.replace(/index\.html$/, "") + location.search + location.hash
+  );
 }
 
 // ─── Theme toggle ────────────────────────────────────────────────────────────
@@ -352,6 +381,8 @@ function applyTheme(theme) {
 // ─── Boot ────────────────────────────────────────────────────────────────────
 
 (function init() {
+  canonicalizeUrl();
+
   let savedLang = null;
   try {
     savedLang = localStorage.getItem("marv-lang");
