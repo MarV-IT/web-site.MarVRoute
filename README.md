@@ -17,7 +17,7 @@ python -m http.server 8000
 ## Структура
 
 - `index.html` — головна сторінка (hero з мокапами екранів Home/Reports, фічі, how it works,
-  ставки IRS/CRA, галерея скріншотів, звіти, Pro, FAQ, форма тестерів)
+  ставки IRS/CRA, галерея скріншотів, звіти, Pro, FAQ, форма підписки на запуск)
 - `privacy/index.html` — політика конфіденційності, доступна за `/privacy`
 - `support/index.html` — сторінка підтримки, доступна за `/support`
 - `styles.css` — адаптивні стилі + темна тема (`:root[data-theme="dark"]`)
@@ -29,7 +29,7 @@ python -m http.server 8000
 
 ## Що треба зробити перед публікацією
 
-1. **Форма тестерів.** У `script.js` змініть `FORM_ENDPOINT` на ваш Formspree ID
+1. **Форма підписки на запуск.** У `script.js` змініть `FORM_ENDPOINT` на ваш Formspree ID
    (formspree.io → New form → скопіюйте `https://formspree.io/f/xxxx`). Поки там
    `your-form-id`, форма працює в демо-режимі без надсилання. Альтернатива — Firebase,
    який уже є в додатку (можна писати ліди у Firestore).

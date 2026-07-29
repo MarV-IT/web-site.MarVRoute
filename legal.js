@@ -32,7 +32,8 @@ const legalI18n = {
     p_1locList:
       "<li>We collect location data to provide trip tracking and route functionality.</li><li>Location may be collected in the background when tracking is enabled.</li>",
     p_1accH: "👤 Account Information",
-    p_1accList: "<li>Email address or login data (if authentication is used).</li>",
+    p_1accList:
+      "<li>Email address or login data (if authentication is used).</li><li>If you ask to be notified about the launch on our website, the name and email address you submit there. We use them only to send that announcement.</li>",
     p_1useH: "📊 Usage Data",
     p_1useList: "<li>Information about how you use the app (features used, interactions).</li>",
     p_1storH: "💾 Stored Data",
@@ -138,7 +139,7 @@ const legalI18n = {
 
     s_featH: "Feature requests",
     s_featBody:
-      "MarV Route is still in active development and tester feedback shapes what gets built next. If something is missing from your workflow, write to us — those messages genuinely change the roadmap.",
+      "MarV Route is in active development and your feedback shapes what gets built next. If something is missing from your workflow, write to us — those messages genuinely change the roadmap.",
   },
 
   uk: {
@@ -168,7 +169,8 @@ const legalI18n = {
     p_1locList:
       "<li>Ми збираємо дані геолокації, щоб забезпечити відстеження поїздок і роботу з маршрутами.</li><li>Геолокація може збиратися у фоновому режимі, коли ввімкнено відстеження.</li>",
     p_1accH: "👤 Дані облікового запису",
-    p_1accList: "<li>Адреса електронної пошти або дані входу (якщо використовується автентифікація).</li>",
+    p_1accList:
+      "<li>Адреса електронної пошти або дані входу (якщо використовується автентифікація).</li><li>Якщо ви попросили повідомити про запуск на нашому сайті — імʼя та адреса пошти, які ви там залишили. Ми використовуємо їх лише для цього повідомлення.</li>",
     p_1useH: "📊 Дані про використання",
     p_1useList: "<li>Інформація про те, як ви користуєтеся додатком (які функції використовуєте, взаємодії).</li>",
     p_1storH: "💾 Збережені дані",
@@ -274,7 +276,7 @@ const legalI18n = {
 
     s_featH: "Побажання щодо функцій",
     s_featBody:
-      "MarV Route ще активно розробляється, і відгуки тестерів впливають на те, що буде створено далі. Якщо вам чогось бракує у роботі — напишіть нам: такі повідомлення справді змінюють плани розробки.",
+      "MarV Route активно розробляється, і ваші відгуки впливають на те, що буде створено далі. Якщо вам чогось бракує у роботі — напишіть нам: такі повідомлення справді змінюють плани розробки.",
   },
 };
 
