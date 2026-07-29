@@ -484,6 +484,15 @@
               <option data-i18n="formOpt4">Personal expense records</option>
             </select>
           </label>
+          <!-- Spam trap: hidden from people, irresistible to bots. -->
+          <input
+            class="hp-field"
+            type="text"
+            name="_gotcha"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          />
           <label class="consent">
             <input type="checkbox" name="consent" required />
             <span data-i18n="formConsent">I agree to be emailed when MarV Route launches. See our <a href="privacy/index.html">Privacy Policy</a>.</span>

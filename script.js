@@ -284,6 +284,10 @@ const i18n = {
 const SUPPORTED_LANGS = ["en", "uk"];
 let currentLang = "en";
 
+// Declared up here on purpose: applyLanguage() → renderFormMessage() reads it
+// during init, which runs before the form section further down this file.
+let formState = null; // { kind: "ok" | "error" | "invalid", name }
+
 function dict() {
   return Object.assign({}, i18n.en, i18n[currentLang] || {});
 }
@@ -312,6 +316,9 @@ function applyLanguage(lang) {
   document.documentElement.setAttribute("lang", currentLang);
   const label = document.querySelector(".lang-current");
   if (label) label.textContent = currentLang.toUpperCase();
+
+  // The form message is generated, not marked up — re-render it by hand.
+  renderFormMessage();
 
   try {
     localStorage.setItem("marv-lang", currentLang);
@@ -400,6 +407,28 @@ function applyTheme(theme) {
 
 // ─── Form submission (Formspree) ─────────────────────────────────────────────
 
+function renderFormMessage() {
+  const el = document.querySelector(".form-message");
+  if (!el) return;
+  if (!formState) {
+    el.textContent = "";
+    el.dataset.state = "";
+    return;
+  }
+  const t = dict();
+  el.dataset.state = formState.kind === "ok" ? "ok" : "error";
+  el.textContent =
+    formState.kind === "ok"
+      ? t.formSuccess.replace("{name}", formState.name)
+      : formState.kind === "invalid"
+        ? t.formInvalid
+        : t.formError;
+}
+
+function isConfigured() {
+  return FORM_ENDPOINT.indexOf("your-form-id") === -1;
+}
+
 function setupForm() {
   const form = document.querySelector(".lead-form");
   if (!form) return;
@@ -408,7 +437,6 @@ function setupForm() {
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const t = dict();
     const data = new FormData(form);
     const name = (data.get("name") || "").toString().trim();
     const email = (data.get("email") || "").toString().trim();
@@ -416,31 +444,39 @@ function setupForm() {
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
     if (!name || !emailOk || !consent) {
-      message.dataset.state = "error";
-      message.textContent = t.formInvalid;
+      formState = { kind: "invalid" };
+      renderFormMessage();
+      return;
+    }
+
+    // Bots fill hidden fields; humans never see this one. Formspree also
+    // drops submissions where _gotcha is non-empty, so this is belt-and-braces.
+    if ((data.get("_gotcha") || "").toString().trim() !== "") {
+      formState = { kind: "ok", name };
+      renderFormMessage();
+      form.reset();
       return;
     }
 
     submitBtn.disabled = true;
+    formState = null;
     message.dataset.state = "";
-    message.textContent = t.formSending;
+    message.textContent = dict().formSending;
 
-    const finishOk = () => {
-      message.dataset.state = "ok";
-      message.textContent = t.formSuccess.replace("{name}", name);
-      form.reset();
-    };
-    const finishErr = () => {
-      message.dataset.state = "error";
-      message.textContent = t.formError;
+    // Give the inbox something readable to sort on.
+    data.set("_subject", `MarV Route launch list — ${name}`);
+    data.set("language", currentLang);
+
+    const finish = (kind) => {
+      formState = { kind, name };
+      renderFormMessage();
+      if (kind === "ok") form.reset();
+      submitBtn.disabled = false;
     };
 
-    // Demo mode until a real Formspree ID is configured above.
-    if (FORM_ENDPOINT.indexOf("your-form-id") !== -1) {
-      setTimeout(() => {
-        finishOk();
-        submitBtn.disabled = false;
-      }, 600);
+    // Demo mode until a real Formspree ID is configured at the top of this file.
+    if (!isConfigured()) {
+      setTimeout(() => finish("ok"), 600);
       return;
     }
 
@@ -450,15 +486,9 @@ function setupForm() {
         headers: { Accept: "application/json" },
         body: data,
       });
-      if (res.ok) {
-        finishOk();
-      } else {
-        finishErr();
-      }
+      finish(res.ok ? "ok" : "error");
     } catch (e) {
-      finishErr();
-    } finally {
-      submitBtn.disabled = false;
+      finish("error");
     }
   });
 }

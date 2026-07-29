@@ -836,6 +836,19 @@ select:focus {
   outline: 3px solid rgba(82, 214, 253, 0.26);
 }
 
+/* Honeypot — parked off-screen, never shown, never focusable.
+   min-height/padding are reset because the generic input rule above sets them. */
+.hp-field {
+  border: 0;
+  height: 0;
+  left: -9999px;
+  min-height: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  width: 0;
+}
+
 .form-message {
   color: var(--blue-dark);
   font-weight: 800;
