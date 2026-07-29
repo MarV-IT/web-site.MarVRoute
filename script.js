@@ -2,9 +2,19 @@
 // MarV Route landing page
 // ─────────────────────────────────────────────────────────────────────────
 
-// Paste your Formspree form ID here (https://formspree.io → New form).
-// While it still says "your-form-id", the form runs in demo mode (no network).
-const FORM_ENDPOINT = "https://formspree.io/f/your-form-id";
+// Launch-list signups are written straight to Firestore in the app's own
+// Firebase project, via the REST API — no SDK bundle to download.
+//
+// The API key below is a public client key (that is what Firebase web keys are;
+// they identify the project, they do not grant access). Access is controlled by
+// the Firestore security rules — see README, "Форма підписки на запуск".
+const FIREBASE_PROJECT_ID = "route-mint-app-2026";
+const FIREBASE_API_KEY = "AIzaSyDTEkO_fcrP1ovbQr1U7tu5lMeDYOV80Jw";
+const LEADS_COLLECTION = "leads";
+
+const FIRESTORE_ENDPOINT =
+  `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT_ID}` +
+  `/databases/(default)/documents/${LEADS_COLLECTION}?key=${FIREBASE_API_KEY}`;
 
 // ─── Translations ──────────────────────────────────────────────────────────
 
@@ -405,7 +415,7 @@ function applyTheme(theme) {
   setupForm();
 })();
 
-// ─── Form submission (Formspree) ─────────────────────────────────────────────
+// ─── Form submission (Firestore REST) ────────────────────────────────────────
 
 function renderFormMessage() {
   const el = document.querySelector(".form-message");
@@ -423,10 +433,6 @@ function renderFormMessage() {
       : formState.kind === "invalid"
         ? t.formInvalid
         : t.formError;
-}
-
-function isConfigured() {
-  return FORM_ENDPOINT.indexOf("your-form-id") === -1;
 }
 
 function setupForm() {
@@ -449,8 +455,8 @@ function setupForm() {
       return;
     }
 
-    // Bots fill hidden fields; humans never see this one. Formspree also
-    // drops submissions where _gotcha is non-empty, so this is belt-and-braces.
+    // Bots fill hidden fields; humans never see this one. Pretend it worked so
+    // the bot has nothing to retry against, but send nothing.
     if ((data.get("_gotcha") || "").toString().trim() !== "") {
       formState = { kind: "ok", name };
       renderFormMessage();
@@ -463,10 +469,6 @@ function setupForm() {
     message.dataset.state = "";
     message.textContent = dict().formSending;
 
-    // Give the inbox something readable to sort on.
-    data.set("_subject", `MarV Route launch list — ${name}`);
-    data.set("language", currentLang);
-
     const finish = (kind) => {
       formState = { kind, name };
       renderFormMessage();
@@ -474,20 +476,33 @@ function setupForm() {
       submitBtn.disabled = false;
     };
 
-    // Demo mode until a real Formspree ID is configured at the top of this file.
-    if (!isConfigured()) {
-      setTimeout(() => finish("ok"), 600);
-      return;
-    }
+    // Firestore REST wants every value tagged with its type.
+    const body = {
+      fields: {
+        name: { stringValue: name.slice(0, 100) },
+        email: { stringValue: email.slice(0, 200) },
+        driverType: { stringValue: (data.get("driver-type") || "").toString() },
+        language: { stringValue: currentLang },
+        createdAt: { timestampValue: new Date().toISOString() },
+      },
+    };
 
     try {
-      const res = await fetch(FORM_ENDPOINT, {
+      const res = await fetch(FIRESTORE_ENDPOINT, {
         method: "POST",
-        headers: { Accept: "application/json" },
-        body: data,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
       });
-      finish(res.ok ? "ok" : "error");
+      if (res.ok) {
+        finish("ok");
+      } else {
+        // 403 here almost always means the Firestore rules for the leads
+        // collection are missing — see README.
+        console.error("[MarV Route] signup failed:", res.status, await res.text());
+        finish("error");
+      }
     } catch (e) {
+      console.error("[MarV Route] signup failed:", e);
       finish("error");
     }
   });

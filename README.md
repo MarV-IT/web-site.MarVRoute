@@ -29,22 +29,54 @@ python -m http.server 8000
 
 ## Що треба зробити перед публікацією
 
-1. **Форма підписки на запуск.** У `script.js` (перший рядок) замініть `your-form-id`
-   на ID вашої форми Formspree:
+1. **Правила Firestore для форми.** Заявки з форми пишуться у колекцію `leads`
+   вашого Firebase-проєкту `route-mint-app-2026` через REST API (без SDK).
+   Код готовий, але **поки не додано правила безпеки, Firestore відповідає
+   403 PERMISSION_DENIED** і форма показує помилку.
 
-   ```js
-   const FORM_ENDPOINT = "https://formspree.io/f/abcdwxyz";
+   Firebase Console → Firestore Database → **Rules**. Додайте блок нижче
+   **всередину** наявного `match /databases/{database}/documents { … }`,
+   поряд з іншими правилами:
+
+   ```
+   match /leads/{leadId} {
+     allow create: if request.resource.data.keys()
+                        .hasOnly(['name', 'email', 'driverType', 'language', 'createdAt'])
+                   && request.resource.data.name is string
+                   && request.resource.data.name.size() > 0
+                   && request.resource.data.name.size() <= 100
+                   && request.resource.data.email is string
+                   && request.resource.data.email.size() <= 200
+                   && request.resource.data.email.matches('^[^@]+@[^@]+[.][^@]+$')
+                   && request.resource.data.driverType is string
+                   && request.resource.data.driverType.size() <= 100
+                   && request.resource.data.language in ['en', 'uk']
+                   && request.resource.data.createdAt is timestamp;
+     allow read, update, delete: if false;
+   }
    ```
 
-   Поки там `your-form-id`, форма працює в демо-режимі: показує «дякуємо», але нічого
-   не надсилає. Більше нічого міняти не треба — решта коду вже готова.
+   > ⚠️ **Не замінюйте весь файл правил** — там лежать правила, що захищають
+   > резервні копії користувачів у додатку. Додавайте саме цей блок.
+
+   Що роблять правила: дозволяють будь-кому **лише створити** запис і лише
+   з цими п'ятьма полями та обмеженнями довжини. Читати, змінювати й видаляти
+   з клієнта не можна взагалі — заявки видно тільки вам у Firebase Console.
+
+   Ключ `FIREBASE_API_KEY` у `script.js` — це публічний клієнтський ключ Firebase.
+   Він ідентифікує проєкт і **не дає доступу**: доступ визначають саме правила вище.
 
    Що вже вбудовано у форму:
    - валідація імені, email і галочки згоди;
-   - honeypot-поле `_gotcha` проти спам-ботів (Formspree теж його розуміє);
-   - `_subject` — тема листа виду «MarV Route launch list — Ім'я»;
+   - honeypot-поле проти спам-ботів (приховане, боти його заповнюють — заявка тихо відкидається);
    - поле `language` — якою мовою людина дивилась сайт;
-   - стани «надсилаємо / успіх / помилка», які перекладаються при зміні мови.
+   - `createdAt` — час заявки;
+   - стани «надсилаємо / успіх / помилка», які перекладаються при зміні мови;
+   - причина збою пишеться в консоль браузера (`[MarV Route] signup failed: …`).
+
+   **Де дивитись заявки:** Firebase Console → Firestore Database → колекція `leads`.
+   Листів на пошту не буде — за потреби це окремо налаштовується через
+   Firebase Extension «Trigger Email» або Cloud Function.
 2. **og-image.** Перегенерувати можна скриптом — див. нижче.
 
 ## Скріншоти галереї
