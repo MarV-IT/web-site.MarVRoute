@@ -154,7 +154,7 @@ const legalI18n = {
     d_h1: "1. Delete from inside the app",
     d_1intro: "The fastest route, and it takes effect immediately:",
     d_1list:
-      "<li>Open <strong>MarV Route</strong> and go to the <strong>Profile</strong> tab.</li><li>Open the <strong>Account</strong> section.</li><li>Tap <strong>Delete account</strong>.</li><li>Confirm with <strong>Delete permanently</strong>.</li>",
+      "<li>Open <strong>MarV Route</strong> and go to the <strong>Profile</strong> tab.</li><li>Scroll to the bottom and open the <strong>Privacy &amp; Data</strong> section.</li><li>Tap <strong>Delete account</strong>.</li><li>Confirm with <strong>Delete permanently</strong>.</li>",
     d_1note:
       "You need to be signed in. If you use MarV Route without an account, nothing is stored in the cloud at all — uninstalling the app removes all of your data.",
 
@@ -331,7 +331,7 @@ const legalI18n = {
     d_h1: "1. Видалення в додатку",
     d_1intro: "Найшвидший спосіб — усе зникає одразу:",
     d_1list:
-      "<li>Відкрийте <strong>MarV Route</strong> і перейдіть на вкладку <strong>Профіль</strong>.</li><li>Розгорніть розділ <strong>Акаунт</strong>.</li><li>Натисніть <strong>Видалити акаунт</strong>.</li><li>Підтвердьте кнопкою <strong>Видалити назавжди</strong>.</li>",
+      "<li>Відкрийте <strong>MarV Route</strong> і перейдіть на вкладку <strong>Профіль</strong>.</li><li>Прокрутіть донизу й розгорніть розділ <strong>Конфіденційність і дані</strong>.</li><li>Натисніть <strong>Видалити акаунт</strong>.</li><li>Підтвердьте кнопкою <strong>Видалити назавжди</strong>.</li>",
     d_1note:
       "Потрібно бути в акаунті. Якщо ви користуєтеся MarV Route без акаунта, у хмарі не зберігається нічого — видалення додатку прибирає всі ваші дані.",
 
