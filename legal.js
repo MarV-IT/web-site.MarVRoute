@@ -140,6 +140,46 @@ const legalI18n = {
     s_featH: "Feature requests",
     s_featBody:
       "MarV Route is in active development and your feedback shapes what gets built next. If something is missing from your workflow, write to us — those messages genuinely change the roadmap.",
+
+    // ── Delete account page ──
+    d_docTitle: "Delete Your Account | MarV Route",
+    d_title: "Delete Your Account",
+    d_updated: "Last updated: July 31, 2026",
+    d_intro:
+      "You can delete your MarV Route account and everything stored with it at any time — from inside the app, or by writing to us. This page covers both routes and exactly what is removed.",
+    d_calloutTitle: "⚠️ Deletion is permanent",
+    d_calloutBody:
+      "Deleting your account erases your cloud backup and the app data on your device. There is no recovery and no waiting period — once you confirm, the data is gone. If you want to keep a copy, export a backup from the Profile tab first.",
+
+    d_h1: "1. Delete from inside the app",
+    d_1intro: "The fastest route, and it takes effect immediately:",
+    d_1list:
+      "<li>Open <strong>MarV Route</strong> and go to the <strong>Profile</strong> tab.</li><li>Open the <strong>Account</strong> section.</li><li>Tap <strong>Delete account</strong>.</li><li>Confirm with <strong>Delete permanently</strong>.</li>",
+    d_1note:
+      "You need to be signed in. If you use MarV Route without an account, nothing is stored in the cloud at all — uninstalling the app removes all of your data.",
+
+    d_h2: "2. Request deletion by email",
+    d_2intro:
+      "If you no longer have the app installed, write to us from the address your account is registered with:",
+    d_2note:
+      'Use the subject "Delete my account". We confirm the request comes from the registered address and complete the deletion within 30 days — usually much sooner.',
+
+    d_h3: "3. What gets deleted",
+    d_3list:
+      "<li><strong>Your account</strong> — the email address and user ID you sign in with.</li><li><strong>Your cloud backup</strong> — trips, trip start and end points, expenses, fuel records, work-mode settings and app preferences.</li><li><strong>Local app data</strong> on the device you delete from — trips, expenses, fuel records and settings.</li>",
+
+    d_h4: "4. Data on other devices",
+    d_4body:
+      "Deleting your account removes the cloud copy and the data on the device you deleted from. If MarV Route is also installed on another phone, that phone still holds its own local copy — uninstall the app there, or delete the account from that device too.",
+
+    d_h5: "5. What we keep",
+    d_5body:
+      "Nothing. We do not retain account data after deletion, and we never sell or share it with third parties. Detailed GPS route traces are never uploaded to the cloud in the first place — they stay on your device and go away with it.",
+
+    d_h6: "6. Contact",
+    d_emailLabel: "📧 Email:",
+    toDelete: "Delete account →",
+    footerDelete: "Delete account",
   },
 
   uk: {
@@ -277,6 +317,46 @@ const legalI18n = {
     s_featH: "Побажання щодо функцій",
     s_featBody:
       "MarV Route активно розробляється, і ваші відгуки впливають на те, що буде створено далі. Якщо вам чогось бракує у роботі — напишіть нам: такі повідомлення справді змінюють плани розробки.",
+
+    // ── Сторінка видалення акаунта ──
+    d_docTitle: "Видалення акаунта | MarV Route",
+    d_title: "Видалення акаунта",
+    d_updated: "Оновлено: 31 липня 2026",
+    d_intro:
+      "Ви можете будь-коли видалити свій акаунт MarV Route і все, що з ним зберігається — просто в додатку або написавши нам. Тут описано обидва способи і те, що саме видаляється.",
+    d_calloutTitle: "⚠️ Видалення незворотне",
+    d_calloutBody:
+      "Видалення акаунта стирає резервну копію в хмарі та дані додатку на вашому пристрої. Відновити їх неможливо, періоду очікування немає — щойно ви підтвердите, дані зникнуть. Якщо хочете зберегти копію, спершу експортуйте резервну копію на вкладці «Профіль».",
+
+    d_h1: "1. Видалення в додатку",
+    d_1intro: "Найшвидший спосіб — усе зникає одразу:",
+    d_1list:
+      "<li>Відкрийте <strong>MarV Route</strong> і перейдіть на вкладку <strong>Профіль</strong>.</li><li>Розгорніть розділ <strong>Акаунт</strong>.</li><li>Натисніть <strong>Видалити акаунт</strong>.</li><li>Підтвердьте кнопкою <strong>Видалити назавжди</strong>.</li>",
+    d_1note:
+      "Потрібно бути в акаунті. Якщо ви користуєтеся MarV Route без акаунта, у хмарі не зберігається нічого — видалення додатку прибирає всі ваші дані.",
+
+    d_h2: "2. Запит на видалення поштою",
+    d_2intro:
+      "Якщо додатка у вас більше немає, напишіть нам з адреси, на яку зареєстровано акаунт:",
+    d_2note:
+      "Тема листа — «Delete my account». Ми переконуємось, що запит надійшов із зареєстрованої адреси, і виконуємо видалення протягом 30 днів, зазвичай значно швидше.",
+
+    d_h3: "3. Що саме видаляється",
+    d_3list:
+      "<li><strong>Ваш акаунт</strong> — електронна адреса та ідентифікатор користувача, з якими ви входите.</li><li><strong>Резервна копія в хмарі</strong> — поїздки, точки початку й кінця поїздок, витрати, записи про пальне, налаштування режиму роботи та параметри додатку.</li><li><strong>Локальні дані</strong> на пристрої, з якого ви видаляєте — поїздки, витрати, записи про пальне й налаштування.</li>",
+
+    d_h4: "4. Дані на інших пристроях",
+    d_4body:
+      "Видалення акаунта прибирає хмарну копію та дані на пристрої, з якого ви його видалили. Якщо MarV Route встановлено ще й на іншому телефоні, там залишається власна локальна копія — видаліть додаток на тому пристрої або видаліть акаунт і з нього.",
+
+    d_h5: "5. Що ми зберігаємо",
+    d_5body:
+      "Нічого. Ми не залишаємо дані акаунта після видалення і ніколи не продаємо та не передаємо їх третім сторонам. Детальні GPS-треки маршрутів узагалі не завантажуються в хмару — вони лишаються на вашому пристрої та зникають разом із ним.",
+
+    d_h6: "6. Контакти",
+    d_emailLabel: "📧 Пошта:",
+    toDelete: "Видалення акаунта →",
+    footerDelete: "Видалення акаунта",
   },
 };
 

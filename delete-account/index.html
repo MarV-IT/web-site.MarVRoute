@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="How to delete your MarV Route account and all associated data — from inside the app or by request."
+    />
+    <meta name="theme-color" content="#08131d" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Delete Your Account | MarV Route" />
+    <meta property="og:description" content="Delete your MarV Route account and all data associated with it." />
+    <meta property="og:image" content="../assets/og-image.png" />
+    <title>Delete Your Account | MarV Route</title>
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        try {
+          var t = localStorage.getItem("marv-theme");
+          if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="icon" type="image/png" href="../assets/marv-route-icon.png" />
+    <link rel="apple-touch-icon" href="../assets/marv-route-icon.png" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body data-title-key="d_docTitle">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="MarV Route home">
+        <img src="../assets/marv-route-icon.png" alt="" />
+        <span>MarV Route</span>
+      </a>
+      <a class="back-link" href="../" data-i18n="backToSite">← Back to site</a>
+      <div class="header-tools">
+        <button class="icon-btn lang-toggle" type="button" aria-label="Switch language">
+          <span class="lang-current">EN</span>
+        </button>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" fill="currentColor" />
+            <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="legal">
+      <p class="eyebrow" data-i18n="eyebrowLegal">Legal</p>
+      <h1 data-i18n="d_title">Delete Your Account</h1>
+      <p class="legal-updated" data-i18n="d_updated">Last updated: July 31, 2026</p>
+
+      <p data-i18n="d_intro">
+        You can delete your MarV Route account and everything stored with it at any time — from
+        inside the app, or by writing to us. This page covers both routes and exactly what is
+        removed.
+      </p>
+
+      <div class="legal-callout">
+        <strong data-i18n="d_calloutTitle">⚠️ Deletion is permanent</strong>
+        <p data-i18n="d_calloutBody">
+          Deleting your account erases your cloud backup and the app data on your device. There is
+          no recovery and no waiting period — once you confirm, the data is gone. If you want to
+          keep a copy, export a backup from the Profile tab first.
+        </p>
+      </div>
+
+      <h2 data-i18n="d_h1">1. Delete from inside the app</h2>
+      <p data-i18n="d_1intro">The fastest route, and it takes effect immediately:</p>
+      <ol data-i18n="d_1list">
+        <li>Open <strong>MarV Route</strong> and go to the <strong>Profile</strong> tab.</li>
+        <li>Open the <strong>Account</strong> section.</li>
+        <li>Tap <strong>Delete account</strong>.</li>
+        <li>Confirm with <strong>Delete permanently</strong>.</li>
+      </ol>
+      <p data-i18n="d_1note">
+        You need to be signed in. If you use MarV Route without an account, nothing is stored in
+        the cloud at all — uninstalling the app removes all of your data.
+      </p>
+
+      <h2 data-i18n="d_h2">2. Request deletion by email</h2>
+      <p data-i18n="d_2intro">
+        If you no longer have the app installed, write to us from the address your account is
+        registered with:
+      </p>
+      <p class="contact-line">
+        <span data-i18n="d_emailLabel">📧 Email:</span>
+        <a class="email-link" href="mailto:marv.labs.it@gmail.com?subject=Delete%20my%20account">marv.labs.it@gmail.com</a>
+      </p>
+      <p data-i18n="d_2note">
+        Use the subject "Delete my account". We confirm the request comes from the registered
+        address and complete the deletion within 30 days — usually much sooner.
+      </p>
+
+      <h2 data-i18n="d_h3">3. What gets deleted</h2>
+      <ul data-i18n="d_3list">
+        <li><strong>Your account</strong> — the email address and user ID you sign in with.</li>
+        <li>
+          <strong>Your cloud backup</strong> — trips, trip start and end points, expenses, fuel
+          records, work-mode settings and app preferences.
+        </li>
+        <li>
+          <strong>Local app data</strong> on the device you delete from — trips, expenses, fuel
+          records and settings.
+        </li>
+      </ul>
+
+      <h2 data-i18n="d_h4">4. Data on other devices</h2>
+      <p data-i18n="d_4body">
+        Deleting your account removes the cloud copy and the data on the device you deleted from.
+        If MarV Route is also installed on another phone, that phone still holds its own local
+        copy — uninstall the app there, or delete the account from that device too.
+      </p>
+
+      <h2 data-i18n="d_h5">5. What we keep</h2>
+      <p data-i18n="d_5body">
+        Nothing. We do not retain account data after deletion, and we never sell or share it with
+        third parties. Detailed GPS route traces are never uploaded to the cloud in the first
+        place — they stay on your device and go away with it.
+      </p>
+
+      <h2 data-i18n="d_h6">6. Contact</h2>
+      <p class="contact-line">
+        <span data-i18n="d_emailLabel">📧 Email:</span>
+        <a class="email-link" href="mailto:marv.labs.it@gmail.com?subject=Delete%20my%20account">marv.labs.it@gmail.com</a>
+      </p>
+
+      <p class="legal-back">
+        <a href="../" data-i18n="backHome">← Back to MarV Route</a>
+        <a href="../privacy/" data-i18n="toPrivacy">Privacy Policy →</a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img src="../assets/marv-route-icon.png" alt="" />
+        <span>© 2026 MarV Route</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="../" data-i18n="footerHome">Home</a>
+        <a href="../#faq" data-i18n="footerFaq">FAQ</a>
+        <a href="../support/" data-i18n="footerSupport">Support</a>
+        <a href="../privacy/" data-i18n="footerPrivacy">Privacy</a>
+      </nav>
+    </footer>
+
+    <script src="../legal.js"></script>
+  </body>
+</html>
