@@ -1375,7 +1375,9 @@ select:focus {
   padding: 20px 22px;
 }
 
-.legal-callout strong {
+/* Direct child only — the callout's title. A <strong> inside the body text
+   must stay inline, or it breaks onto its own line mid-sentence. */
+.legal-callout > strong {
   display: block;
   font-size: 16px;
   margin-bottom: 8px;
@@ -1388,6 +1390,18 @@ select:focus {
 
 .legal-callout p + p {
   margin-top: 10px;
+}
+
+/* Unfilled legal value — deliberately loud so it can't ship unnoticed. */
+.legal-placeholder {
+  background: rgba(255, 200, 87, 0.14);
+  border: 1px dashed var(--yellow);
+  border-radius: 6px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+  padding: 2px 8px;
+  white-space: normal;
 }
 
 /* Contact email */

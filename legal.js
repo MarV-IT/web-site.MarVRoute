@@ -180,6 +180,105 @@ const legalI18n = {
     d_emailLabel: "📧 Email:",
     toDelete: "Delete account →",
     footerDelete: "Delete account",
+
+    // ── Terms of Service page ──
+    t_docTitle: "Terms of Service | MarV Route",
+    footerTerms: "Terms",
+    toTerms: "Terms of Service →",
+    t_title: "Terms of Service",
+    t_effective: "Effective date: November 6, 2026",
+    t_intro:
+      "These Terms govern your use of the MarV Route mobile application and this website. Please read them before you rely on the app for anything that matters — your mileage records, your expenses, or your taxes.",
+    t_calloutTitle: "⚠️ Estimates, not professional advice",
+    t_calloutBody:
+      "MarV Route measures distance with your phone's GPS and calculates deductions using published mileage rates. Both are <strong>estimates</strong>. The app is a record-keeping tool, not an accountant — review your trips before you file anything, and consult a qualified tax professional about your own situation.",
+
+    t_h1: "1. Accepting these Terms",
+    t_1body:
+      "By installing or using MarV Route, you agree to these Terms. If you do not agree, please do not use the app. If you use MarV Route for an employer or a business, you confirm you are allowed to accept these Terms on its behalf.",
+
+    t_h2: "2. Who can use MarV Route",
+    t_2list:
+      "<li>You must be at least 18 years old.</li><li>You must hold a valid driver's licence for the trips you record.</li><li>The app is built around United States and Canadian mileage rules. You may use it elsewhere, but the built-in tax rates will not apply to you.</li>",
+
+    t_h3: "3. Using the app responsibly",
+    t_3intro: "You agree not to:",
+    t_3list:
+      "<li>Operate the app while driving in a way that distracts you or breaks local traffic law.</li><li>Falsify trips, distances or expenses in order to mislead a tax authority, employer or client.</li><li>Use the app for any unlawful purpose, or to track another person without their knowledge.</li><li>Copy, resell, decompile or reverse engineer the app, or try to extract its source code.</li><li>Interfere with the app's operation, or attempt to access accounts or data that are not yours.</li>",
+    t_3note:
+      "<strong>Drive first, tap later.</strong> Start and stop tracking before you set off or after you park. Automatic detection exists precisely so you never need to touch your phone while the car is moving.",
+
+    t_h4: "4. GPS tracking and mileage accuracy",
+    t_4intro:
+      "Distances come from your device's location sensors, so their accuracy depends on things we do not control:",
+    t_4list:
+      "<li>GPS signal quality — tunnels, parking garages and dense city blocks all degrade it.</li><li>Your device, its operating system and its battery-saving settings.</li><li>Permissions: if location access is limited, or the system stops the app in the background, trips can be recorded short, split in two, or missed entirely.</li><li>Automatic detection may also record a trip you did not intend to log.</li>",
+    t_4note:
+      "Recorded distances are estimates, not certified measurements. MarV Route lets you edit any trip by hand for exactly this reason, and you remain responsible for checking that your records are correct and complete.",
+
+    t_h5: "5. Reports are not tax advice",
+    t_5body:
+      "MarV Route calculates estimated deductions using standard mileage rates — the IRS rate in the United States and the CRA rate in Canada. This is a convenience calculation, nothing more.",
+    t_5list:
+      "<li>We are not accountants, tax advisors or legal advisors, and we do not provide such services.</li><li>Official rates change. The app may not reflect a new rate immediately, and an outdated rate produces an outdated estimate.</li><li>Whether a trip is deductible at all, and which method you may use, depends on your own circumstances and your tax authority's rules.</li><li>Reports exported from the app are not certified documents and are not filed on your behalf.</li>",
+    t_5note:
+      "Before filing anything, have your figures checked by a qualified professional. You are solely responsible for what you submit to a tax authority.",
+
+    t_h6: "6. Your records are your responsibility",
+    t_6body:
+      "Keep your own copies of anything you need. Cloud backup is a convenience, not an archival guarantee: data can be lost through device failure, an uninstall, an account deletion, or a service interruption. Export a PDF or CSV of anything you may need later.",
+
+    t_h7: "7. MarV Route Pro subscription",
+    t_7intro:
+      "The core app — trip tracking, manual trips and basic reports — is free. Some features are planned to become part of <strong>MarV Route Pro</strong>, an optional paid subscription. When it launches, these terms will apply:",
+    t_7list:
+      "<li>Pro will be sold as an <strong>annual subscription</strong>. The current price and currency are always shown in the App Store or Google Play before you confirm.</li><li>Payment is charged to your Apple or Google account when you confirm the purchase, not to us — we never see or store your card details.</li><li>The subscription <strong>renews automatically</strong> each year unless you cancel at least 24 hours before the current period ends. Renewal is charged within 24 hours before that date.</li><li>Prices may change for future periods. You will be told in advance, and a price increase never applies to a period you have already paid for.</li><li>If a free trial is offered and you subscribe before it ends, any unused part of the trial is forfeited.</li>",
+    t_7note:
+      "Features that are free today stay free. Pro adds to the app — it does not lock away what you already rely on.",
+
+    t_h8: "8. Cancellation and refunds",
+    t_8intro:
+      "You can cancel at any time, and cancelling is always done in the store you bought from — not in the app:",
+    t_8list:
+      "<li><strong>iPhone / iPad:</strong> Settings → your name → Subscriptions → MarV Route → Cancel Subscription.</li><li><strong>Android:</strong> Google Play → profile icon → Payments &amp; subscriptions → Subscriptions → MarV Route → Cancel.</li>",
+    t_8note1:
+      "After cancelling you keep Pro features until the end of the period you already paid for. Nothing is deleted — your trips, expenses and reports stay in the app, and you can carry on using the free features.",
+    t_8note2:
+      "<strong>Refunds are handled by Apple and Google</strong>, under their own policies, because the payment is made to them. We cannot issue a refund for a store purchase ourselves. If something went wrong, write to us anyway — we will help you put the request together and support it where we can.",
+
+    t_h9: "9. Changes to the app",
+    t_9body:
+      "MarV Route is under active development. We may add, change or remove features, and we may suspend the service for maintenance. We will avoid removing anything you depend on without notice, but we cannot promise that every feature will exist forever.",
+
+    t_h10: "10. Ownership",
+    t_10body:
+      "The app, its name, logo, design and code belong to the developer of MarV Route. You get a personal, non-transferable licence to use the app — not ownership of it. Your data, however, is yours: your trips, expenses and reports belong to you, and you can export or delete them at any time.",
+
+    t_h11: "11. No warranty",
+    t_11body:
+      'MarV Route is provided "as is" and "as available". To the extent the law allows, we make no warranty that the app will be uninterrupted, error-free, or accurate in every measurement, and no warranty of fitness for a particular purpose.',
+
+    t_h12: "12. Limitation of liability",
+    t_12body:
+      "To the extent the law allows, we are not liable for indirect or consequential losses arising from your use of the app — including lost or inaccurate mileage records, rejected deductions, penalties or interest charged by a tax authority, lost profits, or data loss. Nothing in these Terms limits liability that cannot legally be limited.",
+
+    t_h13: "13. Suspension and termination",
+    t_13body:
+      "You may stop using MarV Route at any time by uninstalling it, and you can delete your account and data from the Profile tab. We may suspend or close an account that breaks these Terms or is used unlawfully. If we close your account, we will tell you why where we are permitted to.",
+
+    t_h14: "14. Changes to these Terms",
+    t_14body:
+      "We may update these Terms as the app develops. The effective date at the top of this page will change, and significant changes will be announced in the app or in the store listing. Continuing to use MarV Route after an update means you accept the revised Terms.",
+
+    t_h15: "15. Governing law",
+    t_15body:
+      'These Terms are governed by the laws of <span class="legal-placeholder">[ впишіть юрисдикцію — напр. State of Washington, USA ]</span>, without regard to conflict-of-law rules. This does not take away any protection you have under the mandatory consumer law of the country you live in.',
+
+    t_h16: "16. Contact",
+    t_16body: "Questions about these Terms, or about a subscription:",
+    t_emailLabel: "📧 Email:",
+    t_16note:
+      "MarV Route is developed by MarV-IT. We reply to most messages within 2–3 business days.",
   },
 
   uk: {
@@ -357,6 +456,105 @@ const legalI18n = {
     d_emailLabel: "📧 Пошта:",
     toDelete: "Видалення акаунта →",
     footerDelete: "Видалення акаунта",
+
+    // ── Сторінка умов використання ──
+    t_docTitle: "Умови використання | MarV Route",
+    footerTerms: "Умови",
+    toTerms: "Умови використання →",
+    t_title: "Умови використання",
+    t_effective: "Дата набрання чинності: 6 листопада 2026",
+    t_intro:
+      "Ці Умови регулюють користування мобільним додатком MarV Route і цим сайтом. Прочитайте їх, перш ніж покладатися на додаток у важливих речах — обліку пробігу, витратах чи податках.",
+    t_calloutTitle: "⚠️ Це оцінки, а не професійна консультація",
+    t_calloutBody:
+      "MarV Route вимірює відстань за допомогою GPS вашого телефона й обчислює відрахування за офіційними ставками пробігу. І те, і те — <strong>оцінки</strong>. Додаток є інструментом обліку, а не бухгалтером: перевіряйте поїздки, перш ніж щось подавати, і консультуйтеся з кваліфікованим податковим фахівцем щодо вашої ситуації.",
+
+    t_h1: "1. Прийняття цих Умов",
+    t_1body:
+      "Встановлюючи або використовуючи MarV Route, ви погоджуєтеся з цими Умовами. Якщо ви не згодні — не користуйтеся додатком. Якщо ви використовуєте MarV Route для роботодавця чи бізнесу, ви підтверджуєте, що маєте право прийняти ці Умови від його імені.",
+
+    t_h2: "2. Хто може користуватися MarV Route",
+    t_2list:
+      "<li>Вам має бути щонайменше 18 років.</li><li>Ви повинні мати чинне водійське посвідчення для поїздок, які записуєте.</li><li>Додаток побудований на правилах обліку пробігу США та Канади. Ви можете користуватися ним і в інших країнах, але вбудовані податкові ставки до вас не застосовуватимуться.</li>",
+
+    t_h3: "3. Відповідальне користування додатком",
+    t_3intro: "Ви зобовʼязуєтеся не:",
+    t_3list:
+      "<li>Користуватися додатком під час руху так, що це відволікає вас або порушує місцеві правила дорожнього руху.</li><li>Фальсифікувати поїздки, відстані чи витрати, щоб ввести в оману податковий орган, роботодавця або клієнта.</li><li>Використовувати додаток у протиправних цілях або для стеження за іншою людиною без її відома.</li><li>Копіювати, перепродавати, декомпілювати додаток чи намагатися отримати його вихідний код.</li><li>Втручатися в роботу додатка або намагатися отримати доступ до чужих акаунтів і даних.</li>",
+    t_3note:
+      "<strong>Спершу дорога, потім екран.</strong> Запускайте й зупиняйте відстеження до виїзду або після паркування. Автоматичне визначення існує саме для того, щоб вам не доводилося торкатися телефона під час руху.",
+
+    t_h4: "4. GPS-відстеження та точність пробігу",
+    t_4intro:
+      "Відстані беруться з датчиків місцезнаходження вашого пристрою, тож їхня точність залежить від речей, які ми не контролюємо:",
+    t_4list:
+      "<li>Якість сигналу GPS — тунелі, підземні паркінги й щільна міська забудова погіршують його.</li><li>Ваш пристрій, його операційна система та налаштування енергозбереження.</li><li>Дозволи: якщо доступ до геолокації обмежено або система зупиняє додаток у фоні, поїздки можуть записатися коротшими, розділитися надвоє або не записатися взагалі.</li><li>Автоматичне визначення може також записати поїздку, яку ви не збиралися фіксувати.</li>",
+    t_4note:
+      "Записані відстані — це оцінки, а не сертифіковані вимірювання. Саме тому MarV Route дозволяє відредагувати будь-яку поїздку вручну, і саме ви відповідаєте за перевірку того, що ваші записи правильні й повні.",
+
+    t_h5: "5. Звіти не є податковою консультацією",
+    t_5body:
+      "MarV Route обчислює орієнтовні відрахування за стандартними ставками пробігу — ставкою IRS у США та ставкою CRA в Канаді. Це розрахунок для зручності, не більше.",
+    t_5list:
+      "<li>Ми не бухгалтери, не податкові й не юридичні радники та не надаємо таких послуг.</li><li>Офіційні ставки змінюються. Додаток може не відобразити нову ставку одразу, а застаріла ставка дає застарілу оцінку.</li><li>Чи підлягає поїздка відрахуванню взагалі та який метод можна застосувати — залежить від ваших обставин і правил вашого податкового органу.</li><li>Експортовані з додатка звіти не є сертифікованими документами й не подаються від вашого імені.</li>",
+    t_5note:
+      "Перш ніж щось подавати, дайте перевірити свої цифри кваліфікованому фахівцю. Ви одноосібно відповідаєте за те, що подаєте до податкового органу.",
+
+    t_h6: "6. Ваші записи — ваша відповідальність",
+    t_6body:
+      "Зберігайте власні копії всього, що вам потрібно. Резервна копія в хмарі — це зручність, а не гарантія вічного зберігання: дані можна втратити через поломку пристрою, видалення додатка, видалення акаунта чи перебій у роботі сервісу. Експортуйте PDF або CSV усього, що може знадобитися пізніше.",
+
+    t_h7: "7. Підписка MarV Route Pro",
+    t_7intro:
+      "Основний додаток — відстеження поїздок, ручні поїздки та базові звіти — безкоштовний. Частина функцій планується як <strong>MarV Route Pro</strong>, необовʼязкова платна підписка. Коли її буде запущено, діятимуть такі умови:",
+    t_7list:
+      "<li>Pro продаватиметься як <strong>річна підписка</strong>. Поточна ціна й валюта завжди показані в App Store або Google Play до підтвердження покупки.</li><li>Оплата списується з вашого акаунта Apple або Google у момент підтвердження покупки, а не нами — ми ніколи не бачимо й не зберігаємо дані вашої картки.</li><li>Підписка <strong>поновлюється автоматично</strong> щороку, якщо ви не скасуєте її щонайменше за 24 години до кінця поточного періоду. Оплату за поновлення списують протягом 24 годин до цієї дати.</li><li>Ціни можуть змінюватися для майбутніх періодів. Вас попередять заздалегідь, і підвищення ціни ніколи не стосується вже оплаченого періоду.</li><li>Якщо пропонується безкоштовний пробний період і ви оформлюєте підписку до його завершення, невикористана частина пробного періоду згорає.</li>",
+    t_7note:
+      "Функції, безкоштовні сьогодні, такими й залишаться. Pro додає можливості, а не забирає те, чим ви вже користуєтесь.",
+
+    t_h8: "8. Скасування підписки та повернення коштів",
+    t_8intro:
+      "Скасувати підписку можна будь-коли, і робиться це завжди в магазині, де ви її придбали, а не в додатку:",
+    t_8list:
+      "<li><strong>iPhone / iPad:</strong> Налаштування → ваше імʼя → Підписки → MarV Route → Скасувати підписку.</li><li><strong>Android:</strong> Google Play → значок профілю → Платежі та підписки → Підписки → MarV Route → Скасувати.</li>",
+    t_8note1:
+      "Після скасування Pro-функції лишаються у вас до кінця вже оплаченого періоду. Нічого не видаляється — ваші поїздки, витрати та звіти залишаються в додатку, і ви можете далі користуватися безкоштовними функціями.",
+    t_8note2:
+      "<strong>Поверненням коштів займаються Apple і Google</strong> за власними правилами, бо саме їм здійснюється оплата. Ми не можемо самостійно повернути кошти за покупку в магазині. Якщо щось пішло не так — усе одно напишіть нам: ми допоможемо оформити запит і підтримаємо його, наскільки це можливо.",
+
+    t_h9: "9. Зміни в додатку",
+    t_9body:
+      "MarV Route активно розробляється. Ми можемо додавати, змінювати чи прибирати функції, а також призупиняти роботу сервісу для обслуговування. Ми намагатимемось не прибирати без попередження те, від чого ви залежите, але не можемо обіцяти, що кожна функція існуватиме вічно.",
+
+    t_h10: "10. Право власності",
+    t_10body:
+      "Додаток, його назва, логотип, дизайн і код належать розробнику MarV Route. Ви отримуєте особисту ліцензію на користування додатком без права передачі — але не право власності на нього. Ваші дані, натомість, належать вам: поїздки, витрати та звіти ваші, і ви можете будь-коли експортувати або видалити їх.",
+
+    t_h11: "11. Відсутність гарантій",
+    t_11body:
+      "MarV Route надається «як є» та «як доступно». У межах, дозволених законом, ми не гарантуємо безперебійної роботи додатка, відсутності помилок, точності кожного вимірювання чи придатності для конкретної мети.",
+
+    t_h12: "12. Обмеження відповідальності",
+    t_12body:
+      "У межах, дозволених законом, ми не відповідаємо за непрямі чи похідні збитки, що виникли внаслідок користування додатком, — зокрема за втрачені чи неточні записи пробігу, відхилені відрахування, штрафи чи пеню, нараховані податковим органом, втрачений прибуток або втрату даних. Ніщо в цих Умовах не обмежує відповідальність, яку не можна обмежити за законом.",
+
+    t_h13: "13. Призупинення та припинення",
+    t_13body:
+      "Ви можете припинити користування MarV Route будь-коли, видаливши додаток, а також видалити акаунт і дані у вкладці Profile. Ми можемо призупинити або закрити акаунт, який порушує ці Умови чи використовується протиправно. Якщо ми закриваємо ваш акаунт, ми повідомимо причину там, де нам це дозволено.",
+
+    t_h14: "14. Зміни до цих Умов",
+    t_14body:
+      "Ми можемо оновлювати ці Умови з розвитком додатка. Дата набрання чинності вгорі сторінки змінюватиметься, а про суттєві зміни буде оголошено в додатку або на сторінці в магазині застосунків. Продовження користування MarV Route після оновлення означає, що ви приймаєте нову редакцію Умов.",
+
+    t_h15: "15. Застосовне право",
+    t_15body:
+      'Ці Умови регулюються законодавством <span class="legal-placeholder">[ впишіть юрисдикцію — напр. State of Washington, USA ]</span>, без урахування колізійних норм. Це не позбавляє вас захисту, передбаченого імперативними нормами споживчого права країни вашого проживання.',
+
+    t_h16: "16. Контакти",
+    t_16body: "Питання щодо цих Умов або щодо підписки:",
+    t_emailLabel: "📧 Email:",
+    t_16note:
+      "MarV Route розробляє MarV-IT. На більшість повідомлень ми відповідаємо протягом 2–3 робочих днів.",
   },
 };
 

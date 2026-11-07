@@ -19,6 +19,7 @@ python -m http.server 8000
 - `index.html` — головна сторінка (hero з мокапами екранів Home/Reports, фічі, how it works,
   ставки IRS/CRA, галерея скріншотів, звіти, Pro, FAQ, форма підписки на запуск)
 - `privacy/index.html` — політика конфіденційності, доступна за `/privacy`
+- `terms/index.html` — умови використання, доступні за `/terms`
 - `support/index.html` — сторінка підтримки, доступна за `/support`
 - `styles.css` — адаптивні стилі + темна тема (`:root[data-theme="dark"]`)
 - `script.js` — переклад EN/UK, перемикач теми, анімації появи, обробка форми (головна сторінка)
@@ -113,7 +114,9 @@ python scripts/gen_images.py
 | --- | --- |
 | Головна | `www.marvroute.com/` |
 | Політика конфіденційності | `www.marvroute.com/privacy` |
+| Умови використання | `www.marvroute.com/terms` |
 | Підтримка | `www.marvroute.com/support` |
+| Видалення акаунта | `www.marvroute.com/delete-account` |
 
 Це працює на будь-якому статичному хостингу (Netlify, Vercel, GitHub Pages, Cloudflare Pages)
 і на локальному `python -m http.server` без додаткових налаштувань. Обидві адреси —
@@ -134,6 +137,21 @@ python scripts/gen_images.py
 
 Посилання на `/privacy` потрібне для сторінок додатку в Google Play і App Store,
 `/support` — обовʼязкове поле «Support URL» в App Store Connect.
+
+## Що лишилось дозаповнити в Умовах
+
+У `/terms`, розділ **15. Застосовне право**, стоїть помітний жовтий плейсхолдер:
+
+```
+[ впишіть юрисдикцію — напр. State of Washington, USA ]
+```
+
+Я не вигадував юрисдикцію — її треба обрати свідомо (країна/штат реєстрації
+розробника). Текст лежить у `legal.js` під ключем `t_15body`, **в обох мовах**,
+і в `terms/index.html` як запасний варіант. Шукайте за класом `legal-placeholder`.
+
+Якщо для магазинів застосунків знадобиться юридична назва компанії та адреса —
+їх теж варто додати у розділ **16. Контакти**.
 
 ## Контактна пошта
 
