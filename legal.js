@@ -272,7 +272,7 @@ const legalI18n = {
 
     t_h15: "15. Governing law",
     t_15body:
-      'These Terms are governed by the laws of <span class="legal-placeholder">[ впишіть юрисдикцію — напр. State of Washington, USA ]</span>, without regard to conflict-of-law rules. This does not take away any protection you have under the mandatory consumer law of the country you live in.',
+      "These Terms are governed by the laws of the State of Idaho, United States, without regard to its conflict-of-law rules. This does not take away any protection you have under the mandatory consumer law of the country you live in.",
 
     t_h16: "16. Contact",
     t_16body: "Questions about these Terms, or about a subscription:",
@@ -548,7 +548,7 @@ const legalI18n = {
 
     t_h15: "15. Застосовне право",
     t_15body:
-      'Ці Умови регулюються законодавством <span class="legal-placeholder">[ впишіть юрисдикцію — напр. State of Washington, USA ]</span>, без урахування колізійних норм. Це не позбавляє вас захисту, передбаченого імперативними нормами споживчого права країни вашого проживання.',
+      "Ці Умови регулюються законодавством штату Айдахо, США, без урахування його колізійних норм. Це не позбавляє вас захисту, передбаченого імперативними нормами споживчого права країни вашого проживання.",
 
     t_h16: "16. Контакти",
     t_16body: "Питання щодо цих Умов або щодо підписки:",
