@@ -19,78 +19,56 @@ const legalI18n = {
     p_docTitle: "Privacy Policy | MarV Route",
     eyebrowLegal: "Legal",
     p_title: "Privacy Policy",
-    p_effective: "Effective date: July 27, 2026",
-    p_intro:
-      "MarV Route respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application.",
+    p_effective: "Effective date: November 7, 2026",
+    p_intro: "MarV Route is made by MarV Labs, the trade name of an independent developer based in Boise, Idaho, USA (\"we\", \"us\"). This Privacy Policy explains what data the MarV Route mobile app and the marvroute.com website collect, how we use and protect it, and the choices you have.",
     p_calloutTitle: "📍 Background location notice",
-    p_calloutBody:
-      "MarV Route collects location data to record your trips, and can do so <strong>in the background</strong> — including when the app is closed or not in use — but only while you have trip tracking or automatic trip detection switched on. This data is used solely to measure and save <em>your own</em> trips inside the app. It is never sold, and it is not used for advertising or cross-app tracking. You can turn tracking off at any time in the app or in your device settings.",
-
+    p_calloutBody: "MarV Route collects location data to record your trips, and can do so <strong>in the background</strong> — including when the app is closed or not in use — but only while you have trip tracking or automatic trip detection switched on. This data is used solely to measure and save <em>your own</em> trips inside the app. It is never sold, and it is not used for advertising or cross-app tracking. You can turn tracking off at any time in the app or in your device settings.",
     p_h1: "1. Information We Collect",
-    p_1intro: "We may collect the following types of information:",
+    p_1intro: "What we collect depends on how you use MarV Route:",
     p_1locH: "📍 Location Data",
-    p_1locList:
-      "<li>We collect location data to provide trip tracking and route functionality.</li><li>Location may be collected in the background when tracking is enabled.</li>",
-    p_1accH: "👤 Account Information",
-    p_1accList:
-      "<li>Email address or login data (if authentication is used).</li><li>If you ask to be notified about the launch on our website, the name and email address you submit there. We use them only to send that announcement.</li>",
-    p_1useH: "📊 Usage Data",
-    p_1useList: "<li>Information about how you use the app (features used, interactions).</li>",
-    p_1storH: "💾 Stored Data",
-    p_1storList: "<li>Trips, routes, fuel logs, and related data stored locally or in the cloud.</li>",
-
+    p_1locList: "<li>Precise GPS location while a trip is being recorded, including in the background when tracking or automatic trip detection is on.</li><li>We use it to measure distance and to record each trip's route, start and end points, date and time.</li><li>Detailed GPS route traces stay on your device. They are never uploaded to the cloud.</li>",
+    p_1tripH: "🚗 Trips, Expenses and Settings",
+    p_1tripList: "<li>Whether a trip is business or personal, its platform and purpose, and any edits you make.</li><li>Fuel fill-ups, parking, tolls, repairs and other expenses you log, and your maintenance reminders.</li><li>Your preferences: distance unit, country and currency, language, theme and Work Mode settings.</li>",
+    p_1accH: "👤 Account Information (optional)",
+    p_1accList: "<li>You can use MarV Route without an account. In that case we don't receive your email address, and nothing is stored in the cloud.</li><li>If you create an account with an email and password: your email address and the user ID that Firebase Authentication assigns to you. Your password is checked by Firebase Authentication — we never see it.</li><li>If you sign in with Google: Google shares your name, email address and profile picture with Firebase Authentication.</li><li>To keep you signed in, the app may keep your sign-in details in your phone's secure storage (Keychain on iPhone, Keystore on Android). They are not sent anywhere from there and are removed when you sign out.</li>",
+    p_1webH: "🌐 Website Launch List",
+    p_1webList: "<li>If you ask to be notified about the launch on marvroute.com, we collect the name and email address you enter, the driver type you select, the language you viewed the site in, and the time of your request.</li><li>We use them only to send you the launch announcement. Every email we send will include a way to unsubscribe.</li>",
+    p_1diagH: "🛠 Diagnostics and Statistics",
+    p_1diagList: "<li>If you allow it in your phone's settings, Apple or Google may share crash reports and basic diagnostics with us, such as the device model, OS version and where the app crashed.</li><li>Apple (App Store Connect) and Google (Google Play Console) also give us aggregated statistics about installs, usage and crashes. These statistics do not identify you individually.</li><li>We use this information only to fix bugs and improve the app. MarV Route itself does not contain advertising or analytics SDKs.</li>",
     p_h2: "2. How We Use Your Information",
     p_2intro: "We use your data to:",
-    p_2list:
-      "<li>Provide and maintain app functionality</li><li>Track trips and generate reports</li><li>Calculate mileage and tax estimates for your records</li><li>Improve user experience</li><li>Fix bugs and improve performance</li>",
-    p_2note:
-      "We do not use your location or trip data for advertising, profiling, or automated decision-making.",
-
-    p_h3: "3. Data Storage",
-    p_3intro: "Data may be stored:",
-    p_3list: "<li>Locally on your device</li><li>In cloud services (if enabled)</li>",
-    p_3note: "<strong>We do not sell your personal data.</strong>",
-
+    p_2list: "<li>Provide and maintain app functionality</li><li>Record trips and generate reports</li><li>Calculate mileage and tax estimates for your records</li><li>Back up and restore your data, if you turn on cloud backup</li><li>Send the notifications you allow, such as trip alerts and maintenance reminders</li><li>Answer your support requests, fix bugs and improve the app</li><li>Send the launch announcement, if you asked for it on our website</li>",
+    p_2note: "We do not use your location or trip data for advertising, profiling, or automated decision-making.",
+    p_h3: "3. Where Your Data Is Stored",
+    p_3intro: "Where your data lives depends on the choices you make:",
+    p_3list: "<li><strong>On your device</strong> — by default, all your trips, expenses and settings stay on your phone.</li><li><strong>In the cloud, only if you turn on cloud backup</strong> — your trips with their start and end points, expenses, fuel records, Work Mode settings and app preferences are stored in Google Firebase (Cloud Firestore) and linked to your account.</li><li><strong>Website launch list</strong> — requests from the form on marvroute.com are stored in Google Firebase (Cloud Firestore).</li>",
+    p_3note: "Google may store this data on servers in the United States or other countries. <strong>We do not sell your personal data.</strong>",
     p_h4: "4. Data Retention",
-    p_4list:
-      "<li>Trips, fuel logs, and expenses stay on your device until you delete them or uninstall the app.</li><li>If cloud backup is enabled, backups are kept until you delete them or delete your account.</li><li>Account information is kept for as long as your account exists.</li>",
-
+    p_4list: "<li>Trips, fuel logs and expenses stay on your device until you delete them or uninstall the app.</li><li>If cloud backup is enabled, backups are kept until you delete them or delete your account.</li><li>Account information is kept for as long as your account exists.</li><li>Launch-list requests are kept only as long as we need them to send the launch announcement, or until you ask us to remove them.</li>",
     p_h5: "5. Data Sharing",
-    p_5intro: "We do not share your personal data with third parties except:",
-    p_5list:
-      "<li>When required by law</li><li>To provide essential app services (e.g., Firebase if used)</li>",
-    p_5note:
-      "Where cloud features are enabled, we use Google Firebase (Authentication and cloud storage) to sign you in and store your backups. These providers process data only to deliver the service to us, under their own privacy terms.",
-
+    p_5intro: "We do not sell or rent your personal data, and we do not share it with advertisers or data brokers. We share it only:",
+    p_5list: "<li>With Google Firebase (Authentication and Cloud Firestore), which runs sign-in, cloud backup and the website launch list for us, and with Google Sign-In if you choose to sign in with Google</li><li>When you choose to, for example when you export a PDF or CSV report and send it to someone</li><li>When required by law, or to protect someone's safety</li>",
+    p_5note: "Maps in the app are OpenStreetMap map images downloaded from the OpenStreetMap Foundation's servers (tile.openstreetmap.org), which receive your IP address and the map area on screen, as with any website. Addresses for your trips, and addresses you search for, are looked up with your phone's built-in geocoding service (Apple on iPhone, Google on Android), which receives the coordinates or the address text. These services never receive your email address or account ID.",
     p_h6: "6. Permissions",
     p_6intro: "The app may request:",
-    p_6list:
-      "<li>📍 <strong>Location</strong> — for trip tracking</li><li>📱 <strong>Storage</strong> — for saving data/export files</li><li>🔔 <strong>Notifications</strong> — for trip alerts</li>",
-    p_6note:
-      "Each permission is optional. Denying one only disables the related feature — the rest of the app keeps working.",
-
+    p_6list: "<li>📍 <strong>Location</strong> — for trip tracking</li><li>📱 <strong>Storage</strong> — for saving data/export files</li><li>🔔 <strong>Notifications</strong> — for trip alerts and maintenance reminders</li>",
+    p_6note: "Each permission is optional. Denying one only disables the related feature — the rest of the app keeps working.",
     p_h7: "7. Data Security",
-    p_7body:
-      "We take reasonable measures to protect your data, but no method of transmission is 100% secure. Cloud connections are encrypted in transit, and access to backups is restricted to your own authenticated account.",
-
+    p_7body: "We take reasonable measures to protect your data, but no method of transmission or storage is 100% secure. Cloud connections are encrypted in transit, and access to backups is restricted to your own authenticated account. If a security breach affects your personal information, we will notify you without unreasonable delay, as required by law, including Idaho Code § 28-51-105.",
     p_h8: "8. Your Rights",
     p_8intro: "You can:",
-    p_8list:
-      "<li>Delete your data from the app</li><li>Stop location tracking at any time</li><li>Uninstall the app to remove all data</li><li>Request deletion of your account and any cloud backups by contacting us</li><li>Request a copy of the personal data associated with your account</li>",
-    p_8note:
-      "Depending on where you live (the USA, Canada, the EU, and others), you may have additional rights to access, correct, port, or erase your personal data. Contact us using the details below and we will respond as required by applicable law.",
-
+    p_8list: "<li>Delete individual trips and expenses in the app</li><li>Remove your cloud backup in the Profile tab</li><li>Delete your account and its cloud data in the app — <strong>Profile → Privacy &amp; Data → Delete account</strong> — or by email (see <a href=\"../delete-account/\">Delete account</a>)</li><li>Stop location tracking at any time</li><li>Uninstall the app to remove the data stored on your device</li><li>Request a copy of the personal data associated with your account</li><li>Ask us to remove you from the launch list</li>",
+    p_8note: "Depending on where you live (the USA, Canada, the EU, and others), you may have additional rights to access, correct, port, or erase your personal data. If you live in Canada, your data may be stored and processed outside Canada, including in the United States. Contact us using the details below and we will respond within 30 days, or sooner where the law requires.",
     p_h9: "9. Children's Privacy",
-    p_9body:
-      "This app is not intended for children under 13. We do not knowingly collect personal data from children. If you believe a child has provided us with personal data, contact us and we will delete it.",
-
-    p_h10: "10. Changes to This Policy",
-    p_10body:
-      "We may update this Privacy Policy. Changes will be posted in the app or store listing, and the effective date at the top of this page will be updated.",
-
-    p_h11: "11. Contact Us",
-    p_11intro: "If you have questions:",
+    p_9body: "This app is not intended for children under 13. We do not knowingly collect personal data from children. If you believe a child has provided us with personal data, contact us and we will delete it.",
+    p_h10: "10. Do Not Track",
+    p_10body: "MarV Route and this website do not track you across other companies' apps or websites and do not show ads, so they do not change how they work in response to \"Do Not Track\" signals.",
+    p_h11: "11. Changes to This Policy",
+    p_11body: "We may update this Privacy Policy. Changes will be posted on this page and in the app or store listing, and the effective date at the top of this page will be updated.",
+    p_h12: "12. Contact Us",
+    p_12intro: "If you have questions or requests about your data:",
     p_emailLabel: "📧 Email:",
+    p_12note: "MarV Route is developed by MarV Labs, the trade name of an independent developer based in Boise, Idaho, USA.",
 
     // ── Support page ──
     s_docTitle: "Support | MarV Route",
@@ -130,7 +108,7 @@ const legalI18n = {
       "Everything is in the <strong>Profile</strong> tab — distance unit (miles or kilometers), country and currency, interface language, and theme.",
     s_q6H: "How do I delete my data?",
     s_q6p:
-      "You can delete individual trips and expenses in the app, remove your cloud backups from the Profile tab, or uninstall the app to erase everything stored locally. To have your account and cloud data deleted entirely, email us using the address above.",
+      "You can delete individual trips and expenses in the app, remove your cloud backups from the Profile tab, or uninstall the app to erase everything stored locally. To delete your account and all of its cloud data, open <strong>Profile → Privacy &amp; Data → Delete account</strong> in the app. If you no longer have the app, email us from the address your account is registered with — see <a href=\"../delete-account/\">Delete account</a>.",
 
     s_bugH: "Reporting a bug",
     s_bugIntro: "To help us fix things faster, include as much of this as you can:",
@@ -186,9 +164,9 @@ const legalI18n = {
     footerTerms: "Terms",
     toTerms: "Terms of Service →",
     t_title: "Terms of Service",
-    t_effective: "Effective date: November 6, 2026",
+    t_effective: "Effective date: November 7, 2026",
     t_intro:
-      "These Terms govern your use of the MarV Route mobile application and this website. Please read them before you rely on the app for anything that matters — your mileage records, your expenses, or your taxes.",
+      "These Terms are an agreement between you and MarV Labs, the trade name of an independent developer based in Boise, Idaho, USA (\"we\", \"us\"). They govern your use of the MarV Route mobile application and this website. Please read them before you rely on the app for anything that matters — your mileage records, your expenses, or your taxes.",
     t_calloutTitle: "⚠️ Estimates, not professional advice",
     t_calloutBody:
       "MarV Route measures distance with your phone's GPS and calculates deductions using published mileage rates. Both are <strong>estimates</strong>. The app is a record-keeping tool, not an accountant — review your trips before you file anything, and consult a qualified tax professional about your own situation.",
@@ -206,7 +184,7 @@ const legalI18n = {
     t_3list:
       "<li>Operate the app while driving in a way that distracts you or breaks local traffic law.</li><li>Falsify trips, distances or expenses in order to mislead a tax authority, employer or client.</li><li>Use the app for any unlawful purpose, or to track another person without their knowledge.</li><li>Copy, resell, decompile or reverse engineer the app, or try to extract its source code.</li><li>Interfere with the app's operation, or attempt to access accounts or data that are not yours.</li>",
     t_3note:
-      "<strong>Drive first, tap later.</strong> Start and stop tracking before you set off or after you park. Automatic detection exists precisely so you never need to touch your phone while the car is moving.",
+      "<strong>Drive first, tap later.</strong> Start and stop tracking before you set off or after you park. Automatic detection exists precisely so you never need to touch your phone while the car is moving. In Idaho, the law allows phone use while driving only in hands-free mode (Idaho Code § 49-1401A), and many other states and provinces have similar rules.",
 
     t_h4: "4. GPS tracking and mileage accuracy",
     t_4intro:
@@ -252,7 +230,7 @@ const legalI18n = {
 
     t_h10: "10. Ownership",
     t_10body:
-      "The app, its name, logo, design and code belong to the developer of MarV Route. You get a personal, non-transferable licence to use the app — not ownership of it. Your data, however, is yours: your trips, expenses and reports belong to you, and you can export or delete them at any time.",
+      "The app, its name, logo, design and code belong to MarV Labs. You get a personal, non-transferable licence to use the app — not ownership of it. Your data, however, is yours: your trips, expenses and reports belong to you, and you can export or delete them at any time.",
 
     t_h11: "11. No warranty",
     t_11body:
@@ -264,7 +242,7 @@ const legalI18n = {
 
     t_h13: "13. Suspension and termination",
     t_13body:
-      "You may stop using MarV Route at any time by uninstalling it, and you can delete your account and data from the Profile tab. We may suspend or close an account that breaks these Terms or is used unlawfully. If we close your account, we will tell you why where we are permitted to.",
+      "You may stop using MarV Route at any time by uninstalling it, and you can delete your account and data in the app under Profile → Privacy & Data → Delete account. We may suspend or close an account that breaks these Terms or is used unlawfully. If we close your account, we will tell you why where we are permitted to.",
 
     t_h14: "14. Changes to these Terms",
     t_14body:
@@ -272,13 +250,17 @@ const legalI18n = {
 
     t_h15: "15. Governing law",
     t_15body:
-      "These Terms are governed by the laws of the State of Idaho, United States, without regard to its conflict-of-law rules. This does not take away any protection you have under the mandatory consumer law of the country you live in.",
+      "These Terms are governed by the laws of the State of Idaho, United States, without regard to its conflict-of-law rules. Disputes will be heard by the state or federal courts located in Ada County, Idaho, unless the law of the place where you live gives you the right to go to a court there. This does not take away any protection you have under the mandatory consumer law of the country you live in.",
 
-    t_h16: "16. Contact",
-    t_16body: "Questions about these Terms, or about a subscription:",
+    t_h16: "16. Third-party services and trademarks",
+    t_16body: "MarV Route relies on services from other companies, such as Google Firebase, OpenStreetMap map data and your phone's location services. They can change or be unavailable, and we are not responsible for them. MarV Route is not affiliated with, endorsed or sponsored by any rideshare or delivery platform, such as Uber, Lyft, DoorDash or Instacart. Their names are trademarks of their respective owners and are used only to describe which services the app can be used with.",
+    t_h17: "17. Apple App Store",
+    t_17intro: "If you downloaded MarV Route from the Apple App Store, the following also applies:",
+    t_17list: "<li>These Terms are between you and us, not Apple. We, not Apple, are solely responsible for the app and its content.</li><li>Your licence is limited to Apple-branded devices that you own or control, as allowed by the Usage Rules in the Apple Media Services Terms and Conditions.</li><li>Apple has no obligation to provide maintenance or support for the app.</li><li>If the app fails to meet any applicable warranty, you may notify Apple, and Apple will refund the purchase price, if any. Apple has no other warranty obligation for the app.</li><li>We, not Apple, are responsible for addressing any claims about the app, including product liability claims, claims that it fails to meet legal or regulatory requirements, and consumer protection or privacy claims.</li><li>If someone claims that the app infringes their intellectual property, we, not Apple, are responsible for investigating, defending and settling that claim.</li><li>You confirm that you are not located in a country subject to a US government embargo and that you are not on any US government list of prohibited or restricted parties.</li><li>You must follow any third-party terms that apply when you use the app, such as your wireless data plan.</li><li>Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you.</li>",
+    t_h18: "18. Contact",
+    t_18body: "Questions about these Terms, or about a subscription:",
     t_emailLabel: "📧 Email:",
-    t_16note:
-      "MarV Route is developed by MarV-IT. We reply to most messages within 2–3 business days.",
+    t_18note: "MarV Route is developed by MarV Labs, the trade name of an independent developer based in Boise, Idaho, USA. We reply to most messages within 2–3 business days.",
   },
 
   uk: {
@@ -295,78 +277,56 @@ const legalI18n = {
     p_docTitle: "Політика конфіденційності | MarV Route",
     eyebrowLegal: "Правова інформація",
     p_title: "Політика конфіденційності",
-    p_effective: "Дата набрання чинності: 27 липня 2026",
-    p_intro:
-      "MarV Route поважає вашу приватність і зобовʼязується захищати ваші персональні дані. Ця Політика конфіденційності пояснює, як ми збираємо, використовуємо та захищаємо вашу інформацію, коли ви користуєтеся нашим мобільним додатком.",
+    p_effective: "Дата набрання чинності: 7 листопада 2026",
+    p_intro: "MarV Route створює MarV Labs — торгова назва незалежного розробника з Бойсе, штат Айдахо, США («ми»). Ця Політика конфіденційності пояснює, які дані збирають мобільний додаток MarV Route і сайт marvroute.com, як ми їх використовуємо й захищаємо та що ви можете з цим зробити.",
     p_calloutTitle: "📍 Повідомлення про геолокацію у фоні",
-    p_calloutBody:
-      "MarV Route збирає дані геолокації, щоб записувати ваші поїздки, і може робити це <strong>у фоновому режимі</strong> — зокрема коли додаток закритий або не використовується — але лише поки увімкнено відстеження поїздок чи автоматичне виявлення поїздок. Ці дані використовуються виключно для вимірювання та збереження <em>ваших власних</em> поїздок у додатку. Ми ніколи їх не продаємо і не використовуємо для реклами чи стеження між додатками. Ви можете вимкнути відстеження будь-коли — у додатку або в налаштуваннях пристрою.",
-
+    p_calloutBody: "MarV Route збирає дані геолокації, щоб записувати ваші поїздки, і може робити це <strong>у фоновому режимі</strong> — зокрема коли додаток закритий або не використовується — але лише поки увімкнено відстеження поїздок чи автоматичне виявлення поїздок. Ці дані використовуються виключно для вимірювання та збереження <em>ваших власних</em> поїздок у додатку. Ми ніколи їх не продаємо і не використовуємо для реклами чи стеження між додатками. Ви можете вимкнути відстеження будь-коли — у додатку або в налаштуваннях пристрою.",
     p_h1: "1. Які дані ми збираємо",
-    p_1intro: "Ми можемо збирати такі типи інформації:",
+    p_1intro: "Що саме ми збираємо, залежить від того, як ви користуєтеся MarV Route:",
     p_1locH: "📍 Дані геолокації",
-    p_1locList:
-      "<li>Ми збираємо дані геолокації, щоб забезпечити відстеження поїздок і роботу з маршрутами.</li><li>Геолокація може збиратися у фоновому режимі, коли ввімкнено відстеження.</li>",
-    p_1accH: "👤 Дані облікового запису",
-    p_1accList:
-      "<li>Адреса електронної пошти або дані входу (якщо використовується автентифікація).</li><li>Якщо ви попросили повідомити про запуск на нашому сайті — імʼя та адреса пошти, які ви там залишили. Ми використовуємо їх лише для цього повідомлення.</li>",
-    p_1useH: "📊 Дані про використання",
-    p_1useList: "<li>Інформація про те, як ви користуєтеся додатком (які функції використовуєте, взаємодії).</li>",
-    p_1storH: "💾 Збережені дані",
-    p_1storList: "<li>Поїздки, маршрути, записи про пальне та повʼязані дані, збережені локально або в хмарі.</li>",
-
+    p_1locList: "<li>Точна GPS-геолокація під час запису поїздки, зокрема у фоновому режимі, коли ввімкнено відстеження чи автоматичне визначення поїздок.</li><li>Ми використовуємо її, щоб виміряти відстань і записати маршрут, точки початку й кінця, дату й час кожної поїздки.</li><li>Детальні GPS-треки маршрутів залишаються на вашому пристрої й ніколи не завантажуються в хмару.</li>",
+    p_1tripH: "🚗 Поїздки, витрати й налаштування",
+    p_1tripList: "<li>Чи була поїздка робочою чи особистою, її платформа й мета, а також ваші правки.</li><li>Заправки, паркування, платні дороги, ремонти й інші витрати, які ви вносите, та нагадування про обслуговування.</li><li>Ваші налаштування: одиниця відстані, країна й валюта, мова, тема й параметри Work Mode.</li>",
+    p_1accH: "👤 Дані облікового запису (необовʼязково)",
+    p_1accList: "<li>MarV Route можна користуватися без облікового запису. Тоді ми не отримуємо вашу адресу пошти, а в хмарі нічого не зберігається.</li><li>Якщо ви створюєте обліковий запис з email і паролем: адреса електронної пошти та ідентифікатор користувача, який призначає Firebase Authentication. Пароль перевіряє Firebase Authentication — ми його ніколи не бачимо.</li><li>Якщо ви входите через Google: Google передає Firebase Authentication ваше імʼя, адресу пошти й фото профілю.</li><li>Щоб ви залишалися в системі, додаток може зберігати дані для входу в захищеному сховищі телефона (Keychain на iPhone, Keystore на Android). Звідти вони нікуди не передаються й видаляються, коли ви виходите з облікового запису.</li>",
+    p_1webH: "🌐 Список очікування на сайті",
+    p_1webList: "<li>Якщо ви просите повідомити про запуск на marvroute.com, ми збираємо імʼя та адресу пошти, які ви вводите, вибраний тип водія, мову, якою ви переглядали сайт, і час заявки.</li><li>Ми використовуємо їх лише для того, щоб надіслати вам повідомлення про запуск. У кожному нашому листі буде спосіб відписатися.</li>",
+    p_1diagH: "🛠 Діагностика й статистика",
+    p_1diagList: "<li>Якщо ви дозволили це в налаштуваннях телефона, Apple чи Google можуть передавати нам звіти про збої та базову діагностику: модель пристрою, версію ОС і місце збою.</li><li>Apple (App Store Connect) і Google (Google Play Console) також надають нам узагальнену статистику встановлень, використання й збоїв. Ця статистика не ідентифікує вас особисто.</li><li>Ми використовуємо ці дані лише для виправлення помилок і покращення додатку. Сам MarV Route не містить рекламних чи аналітичних SDK.</li>",
     p_h2: "2. Як ми використовуємо ваші дані",
     p_2intro: "Ми використовуємо ваші дані, щоб:",
-    p_2list:
-      "<li>Забезпечувати та підтримувати роботу додатку</li><li>Відстежувати поїздки й формувати звіти</li><li>Обчислювати пробіг і податкові оцінки для ваших записів</li><li>Покращувати зручність користування</li><li>Виправляти помилки та підвищувати продуктивність</li>",
-    p_2note:
-      "Ми не використовуємо ваші дані геолокації чи поїздок для реклами, профілювання або автоматизованого ухвалення рішень.",
-
-    p_h3: "3. Зберігання даних",
-    p_3intro: "Дані можуть зберігатися:",
-    p_3list: "<li>Локально на вашому пристрої</li><li>У хмарних сервісах (якщо їх увімкнено)</li>",
-    p_3note: "<strong>Ми не продаємо ваші персональні дані.</strong>",
-
+    p_2list: "<li>Забезпечувати та підтримувати роботу додатку</li><li>Записувати поїздки й формувати звіти</li><li>Обчислювати пробіг і податкові оцінки для ваших записів</li><li>Створювати й відновлювати резервну копію, якщо ви ввімкнули резервне копіювання в хмару</li><li>Надсилати дозволені вами сповіщення, як-от про поїздки й обслуговування</li><li>Відповідати на звернення в підтримку, виправляти помилки й покращувати додаток</li><li>Надіслати повідомлення про запуск, якщо ви попросили про це на сайті</li>",
+    p_2note: "Ми не використовуємо ваші дані геолокації чи поїздок для реклами, профілювання або автоматизованого ухвалення рішень.",
+    p_h3: "3. Де зберігаються дані",
+    p_3intro: "Де зберігаються ваші дані, залежить від вашого вибору:",
+    p_3list: "<li><strong>На вашому пристрої</strong> — за замовчуванням усі поїздки, витрати й налаштування залишаються на телефоні.</li><li><strong>У хмарі, лише якщо ви ввімкнули резервне копіювання</strong> — поїздки з точками початку й кінця, витрати, записи про пальне, налаштування Work Mode і параметри додатку зберігаються в Google Firebase (Cloud Firestore) і привʼязані до вашого облікового запису.</li><li><strong>Список очікування на сайті</strong> — заявки з форми на marvroute.com зберігаються в Google Firebase (Cloud Firestore).</li>",
+    p_3note: "Google може зберігати ці дані на серверах у США чи інших країнах. <strong>Ми не продаємо ваші персональні дані.</strong>",
     p_h4: "4. Строки зберігання даних",
-    p_4list:
-      "<li>Поїздки, записи про пальне та витрати залишаються на вашому пристрої, доки ви їх не видалите або не видалите додаток.</li><li>Якщо ввімкнено резервне копіювання в хмару, копії зберігаються, доки ви їх не видалите або не видалите обліковий запис.</li><li>Дані облікового запису зберігаються, доки існує ваш обліковий запис.</li>",
-
+    p_4list: "<li>Поїздки, записи про пальне та витрати залишаються на вашому пристрої, доки ви їх не видалите або не видалите додаток.</li><li>Якщо ввімкнено резервне копіювання в хмару, копії зберігаються, доки ви їх не видалите або не видалите обліковий запис.</li><li>Дані облікового запису зберігаються, доки існує ваш обліковий запис.</li><li>Заявки зі списку очікування зберігаються лише стільки, скільки потрібно, щоб надіслати повідомлення про запуск, або доки ви не попросите їх видалити.</li>",
     p_h5: "5. Передача даних",
-    p_5intro: "Ми не передаємо ваші персональні дані третім сторонам, окрім випадків:",
-    p_5list:
-      "<li>Коли цього вимагає закон</li><li>Для надання основних сервісів додатку (наприклад, Firebase, якщо використовується)</li>",
-    p_5note:
-      "Якщо хмарні функції ввімкнено, ми використовуємо Google Firebase (автентифікація та хмарне сховище) для входу й зберігання ваших резервних копій. Ці постачальники обробляють дані лише для надання нам відповідної послуги, згідно з власними умовами конфіденційності.",
-
+    p_5intro: "Ми не продаємо й не здаємо в оренду ваші персональні дані та не передаємо їх рекламодавцям чи брокерам даних. Ми передаємо їх лише:",
+    p_5list: "<li>Google Firebase (Authentication і Cloud Firestore), який забезпечує для нас вхід, резервне копіювання в хмару та список очікування на сайті, а також Google Sign-In, якщо ви входите через Google</li><li>Коли ви самі так вирішуєте, наприклад експортуєте звіт PDF чи CSV і надсилаєте його комусь</li><li>Коли цього вимагає закон або щоб захистити чиюсь безпеку</li>",
+    p_5note: "Карти в додатку — це зображення OpenStreetMap, які завантажуються із серверів OpenStreetMap Foundation (tile.openstreetmap.org); ці сервери отримують вашу IP-адресу й ділянку карти на екрані, як і будь-який сайт. Адреси ваших поїздок і адреси, які ви шукаєте, визначає вбудований сервіс геокодування телефона (Apple на iPhone, Google на Android), який отримує координати або текст адреси. Ці сервіси ніколи не отримують вашу адресу пошти чи ідентифікатор облікового запису.",
     p_h6: "6. Дозволи",
     p_6intro: "Додаток може запитувати:",
-    p_6list:
-      "<li>📍 <strong>Геолокація</strong> — для відстеження поїздок</li><li>📱 <strong>Сховище</strong> — для збереження даних та файлів експорту</li><li>🔔 <strong>Сповіщення</strong> — для повідомлень про поїздки</li>",
-    p_6note:
-      "Кожен дозвіл є необовʼязковим. Відмова вимикає лише повʼязану функцію — решта додатку працює далі.",
-
+    p_6list: "<li>📍 <strong>Геолокація</strong> — для відстеження поїздок</li><li>📱 <strong>Сховище</strong> — для збереження даних та файлів експорту</li><li>🔔 <strong>Сповіщення</strong> — для повідомлень про поїздки й нагадувань про обслуговування</li>",
+    p_6note: "Кожен дозвіл є необовʼязковим. Відмова вимикає лише повʼязану функцію — решта додатку працює далі.",
     p_h7: "7. Безпека даних",
-    p_7body:
-      "Ми вживаємо розумних заходів для захисту ваших даних, але жоден спосіб передавання не є на 100% безпечним. Зʼєднання з хмарою шифруються під час передавання, а доступ до резервних копій обмежений вашим власним автентифікованим обліковим записом.",
-
+    p_7body: "Ми вживаємо розумних заходів для захисту ваших даних, але жоден спосіб передавання чи зберігання не є на 100% безпечним. Зʼєднання з хмарою шифруються під час передавання, а доступ до резервних копій обмежений вашим власним автентифікованим обліковим записом. Якщо витік зачепить ваші персональні дані, ми повідомимо вас без невиправданої затримки, як того вимагає закон, зокрема Idaho Code § 28-51-105.",
     p_h8: "8. Ваші права",
     p_8intro: "Ви можете:",
-    p_8list:
-      "<li>Видалити свої дані з додатку</li><li>Будь-коли зупинити відстеження геолокації</li><li>Видалити додаток, щоб стерти всі дані</li><li>Звернутися до нас із запитом на видалення облікового запису та всіх хмарних копій</li><li>Запитати копію персональних даних, повʼязаних з вашим обліковим записом</li>",
-    p_8note:
-      "Залежно від того, де ви проживаєте (США, Канада, ЄС та інші), ви можете мати додаткові права на доступ, виправлення, перенесення або стирання ваших персональних даних. Звертайтеся до нас за контактами нижче — ми відповімо у порядку, передбаченому чинним законодавством.",
-
+    p_8list: "<li>Видаляти окремі поїздки й витрати в додатку</li><li>Прибрати резервну копію в хмарі у вкладці «Профіль»</li><li>Видалити обліковий запис і його хмарні дані в додатку — <strong>Профіль → Конфіденційність і дані → Видалити акаунт</strong> — або поштою (див. <a href=\"../delete-account/\">Видалення акаунта</a>)</li><li>Будь-коли зупинити відстеження геолокації</li><li>Видалити додаток, щоб стерти дані на пристрої</li><li>Запитати копію персональних даних, повʼязаних з вашим обліковим записом</li><li>Попросити видалити вас зі списку очікування</li>",
+    p_8note: "Залежно від того, де ви проживаєте (США, Канада, ЄС та інші), ви можете мати додаткові права на доступ, виправлення, перенесення або стирання ваших персональних даних. Якщо ви живете в Канаді, ваші дані можуть зберігатися й оброблятися за її межами, зокрема в США. Звертайтеся до нас за контактами нижче — ми відповімо протягом 30 днів або швидше, якщо цього вимагає закон.",
     p_h9: "9. Конфіденційність дітей",
-    p_9body:
-      "Цей додаток не призначений для дітей віком до 13 років. Ми свідомо не збираємо персональні дані дітей. Якщо ви вважаєте, що дитина надала нам персональні дані, звʼяжіться з нами — і ми їх видалимо.",
-
-    p_h10: "10. Зміни до цієї Політики",
-    p_10body:
-      "Ми можемо оновлювати цю Політику конфіденційності. Зміни буде опубліковано в додатку або на сторінці в магазині застосунків, а дату набрання чинності вгорі цієї сторінки буде оновлено.",
-
-    p_h11: "11. Звʼязок з нами",
-    p_11intro: "Якщо у вас є запитання:",
+    p_9body: "Цей додаток не призначений для дітей віком до 13 років. Ми свідомо не збираємо персональні дані дітей. Якщо ви вважаєте, що дитина надала нам персональні дані, звʼяжіться з нами — і ми їх видалимо.",
+    p_h10: "10. Сигнали «Do Not Track»",
+    p_10body: "MarV Route і цей сайт не відстежують вас у додатках і на сайтах інших компаній і не показують рекламу, тож не змінюють роботу у відповідь на сигнали «Do Not Track».",
+    p_h11: "11. Зміни до цієї Політики",
+    p_11body: "Ми можемо оновлювати цю Політику конфіденційності. Зміни буде опубліковано на цій сторінці, а також у додатку або на сторінці в магазині застосунків, а дату набрання чинності вгорі сторінки буде оновлено.",
+    p_h12: "12. Звʼязок з нами",
+    p_12intro: "Якщо у вас є запитання чи запити щодо ваших даних:",
     p_emailLabel: "📧 Email:",
+    p_12note: "MarV Route розробляє MarV Labs — торгова назва незалежного розробника з Бойсе, штат Айдахо, США.",
 
     // ── Сторінка підтримки ──
     s_docTitle: "Підтримка | MarV Route",
@@ -406,7 +366,7 @@ const legalI18n = {
       "Усе це у вкладці <strong>Profile</strong> — одиниця відстані (милі або кілометри), країна й валюта, мова інтерфейсу та тема.",
     s_q6H: "Як видалити свої дані?",
     s_q6p:
-      "Ви можете видаляти окремі поїздки та витрати в додатку, прибрати хмарні резервні копії у вкладці Profile або видалити додаток, щоб стерти все збережене локально. Щоб повністю видалити обліковий запис і хмарні дані, напишіть нам на адресу вище.",
+      "Ви можете видаляти окремі поїздки та витрати в додатку, прибрати хмарні резервні копії у вкладці Profile або видалити додаток, щоб стерти все збережене локально. Щоб видалити обліковий запис і всі його хмарні дані, відкрийте в додатку <strong>Профіль → Конфіденційність і дані → Видалити акаунт</strong>. Якщо додатка у вас більше немає, напишіть нам з адреси, на яку зареєстровано акаунт, — див. <a href=\"../delete-account/\">Видалення акаунта</a>.",
 
     s_bugH: "Повідомити про помилку",
     s_bugIntro: "Щоб ми виправили швидше, вкажіть якомога більше з цього:",
@@ -462,9 +422,9 @@ const legalI18n = {
     footerTerms: "Умови",
     toTerms: "Умови використання →",
     t_title: "Умови використання",
-    t_effective: "Дата набрання чинності: 6 листопада 2026",
+    t_effective: "Дата набрання чинності: 7 листопада 2026",
     t_intro:
-      "Ці Умови регулюють користування мобільним додатком MarV Route і цим сайтом. Прочитайте їх, перш ніж покладатися на додаток у важливих речах — обліку пробігу, витратах чи податках.",
+      "Ці Умови — угода між вами та MarV Labs, торговою назвою незалежного розробника з Бойсе, штат Айдахо, США («ми»). Вони регулюють користування мобільним додатком MarV Route і цим сайтом. Прочитайте їх, перш ніж покладатися на додаток у важливих речах — обліку пробігу, витратах чи податках.",
     t_calloutTitle: "⚠️ Це оцінки, а не професійна консультація",
     t_calloutBody:
       "MarV Route вимірює відстань за допомогою GPS вашого телефона й обчислює відрахування за офіційними ставками пробігу. І те, і те — <strong>оцінки</strong>. Додаток є інструментом обліку, а не бухгалтером: перевіряйте поїздки, перш ніж щось подавати, і консультуйтеся з кваліфікованим податковим фахівцем щодо вашої ситуації.",
@@ -482,7 +442,7 @@ const legalI18n = {
     t_3list:
       "<li>Користуватися додатком під час руху так, що це відволікає вас або порушує місцеві правила дорожнього руху.</li><li>Фальсифікувати поїздки, відстані чи витрати, щоб ввести в оману податковий орган, роботодавця або клієнта.</li><li>Використовувати додаток у протиправних цілях або для стеження за іншою людиною без її відома.</li><li>Копіювати, перепродавати, декомпілювати додаток чи намагатися отримати його вихідний код.</li><li>Втручатися в роботу додатка або намагатися отримати доступ до чужих акаунтів і даних.</li>",
     t_3note:
-      "<strong>Спершу дорога, потім екран.</strong> Запускайте й зупиняйте відстеження до виїзду або після паркування. Автоматичне визначення існує саме для того, щоб вам не доводилося торкатися телефона під час руху.",
+      "<strong>Спершу дорога, потім екран.</strong> Запускайте й зупиняйте відстеження до виїзду або після паркування. Автоматичне визначення існує саме для того, щоб вам не доводилося торкатися телефона під час руху. В Айдахо закон дозволяє користуватися телефоном за кермом лише в режимі hands-free (Idaho Code § 49-1401A), і в багатьох інших штатах і провінціях діють схожі правила.",
 
     t_h4: "4. GPS-відстеження та точність пробігу",
     t_4intro:
@@ -528,7 +488,7 @@ const legalI18n = {
 
     t_h10: "10. Право власності",
     t_10body:
-      "Додаток, його назва, логотип, дизайн і код належать розробнику MarV Route. Ви отримуєте особисту ліцензію на користування додатком без права передачі — але не право власності на нього. Ваші дані, натомість, належать вам: поїздки, витрати та звіти ваші, і ви можете будь-коли експортувати або видалити їх.",
+      "Додаток, його назва, логотип, дизайн і код належать MarV Labs. Ви отримуєте особисту ліцензію на користування додатком без права передачі — але не право власності на нього. Ваші дані, натомість, належать вам: поїздки, витрати та звіти ваші, і ви можете будь-коли експортувати або видалити їх.",
 
     t_h11: "11. Відсутність гарантій",
     t_11body:
@@ -540,7 +500,7 @@ const legalI18n = {
 
     t_h13: "13. Призупинення та припинення",
     t_13body:
-      "Ви можете припинити користування MarV Route будь-коли, видаливши додаток, а також видалити акаунт і дані у вкладці Profile. Ми можемо призупинити або закрити акаунт, який порушує ці Умови чи використовується протиправно. Якщо ми закриваємо ваш акаунт, ми повідомимо причину там, де нам це дозволено.",
+      "Ви можете припинити користування MarV Route будь-коли, видаливши додаток, а також видалити акаунт і дані в додатку: Профіль → Конфіденційність і дані → Видалити акаунт. Ми можемо призупинити або закрити акаунт, який порушує ці Умови чи використовується протиправно. Якщо ми закриваємо ваш акаунт, ми повідомимо причину там, де нам це дозволено.",
 
     t_h14: "14. Зміни до цих Умов",
     t_14body:
@@ -548,13 +508,17 @@ const legalI18n = {
 
     t_h15: "15. Застосовне право",
     t_15body:
-      "Ці Умови регулюються законодавством штату Айдахо, США, без урахування його колізійних норм. Це не позбавляє вас захисту, передбаченого імперативними нормами споживчого права країни вашого проживання.",
+      "Ці Умови регулюються законодавством штату Айдахо, США, без урахування його колізійних норм. Спори розглядають суди штату або федеральні суди в окрузі Ада, штат Айдахо, якщо закон вашого місця проживання не дає вам права звернутися до суду за місцем проживання. Це не позбавляє вас захисту, передбаченого імперативними нормами споживчого права країни вашого проживання.",
 
-    t_h16: "16. Контакти",
-    t_16body: "Питання щодо цих Умов або щодо підписки:",
+    t_h16: "16. Сторонні сервіси й торгові марки",
+    t_16body: "MarV Route спирається на сервіси інших компаній — Google Firebase, картографічні дані OpenStreetMap і служби геолокації вашого телефона. Вони можуть змінюватися або бути недоступними, і ми за них не відповідаємо. MarV Route не повʼязаний з жодною платформою таксі чи доставки, як-от Uber, Lyft, DoorDash чи Instacart, і не схвалений та не спонсорований ними. Їхні назви — торгові марки відповідних власників і згадуються лише для того, щоб показати, з якими сервісами можна використовувати додаток.",
+    t_h17: "17. Apple App Store",
+    t_17intro: "Якщо ви завантажили MarV Route з Apple App Store, також діє таке:",
+    t_17list: "<li>Ці Умови укладено між вами й нами, а не з Apple. Лише ми, а не Apple, відповідаємо за додаток і його вміст.</li><li>Ваша ліцензія обмежена пристроями Apple, якими ви володієте або керуєте, у межах Правил використання (Usage Rules) з Умов Apple Media Services.</li><li>Apple не зобовʼязана надавати обслуговування чи підтримку додатку.</li><li>Якщо додаток не відповідає застосовній гарантії, ви можете повідомити Apple, і Apple поверне вартість покупки, якщо вона була. Інших гарантійних зобовʼязань щодо додатку Apple не має.</li><li>Розгляд будь-яких претензій щодо додатку, зокрема щодо відповідальності за продукт, невідповідності вимогам законодавства, захисту прав споживачів чи конфіденційності, — наша відповідальність, а не Apple.</li><li>Якщо хтось заявить, що додаток порушує його інтелектуальну власність, розслідування, захист і врегулювання такої претензії — наша відповідальність, а не Apple.</li><li>Ви підтверджуєте, що не перебуваєте в країні під ембарго уряду США і не входите до жодного списку осіб, щодо яких уряд США встановив заборони чи обмеження.</li><li>Ви маєте дотримуватися умов третіх сторін, які застосовуються під час користування додатком, наприклад умов вашого мобільного тарифу.</li><li>Apple та її дочірні компанії є сторонніми вигодонабувачами цих Умов і можуть вимагати від вас їх виконання.</li>",
+    t_h18: "18. Контакти",
+    t_18body: "Питання щодо цих Умов або щодо підписки:",
     t_emailLabel: "📧 Email:",
-    t_16note:
-      "MarV Route розробляє MarV-IT. На більшість повідомлень ми відповідаємо протягом 2–3 робочих днів.",
+    t_18note: "MarV Route розробляє MarV Labs — торгова назва незалежного розробника з Бойсе, штат Айдахо, США. На більшість повідомлень ми відповідаємо протягом 2–3 робочих днів.",
   },
 };
 
