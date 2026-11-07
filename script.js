@@ -78,6 +78,7 @@ const i18n = {
     how3Body:
       "Pick a date range and send a PDF or CSV with mileage, fuel, parking, and tolls straight to your accountant.",
     rateUsa: "USA · IRS rate",
+    rateUsaNote: "from July 1, 2026; $0.725 before",
     rateCanada: "Canada · CRA rate",
     rateCanadaNote: "first 5,000 km, then $0.67",
     rateNote: "Rates are built into the app, so your tax estimate updates with every trip.",
@@ -123,7 +124,7 @@ const i18n = {
       "Yes. Tracking, logging, and reports all work without a connection. Cloud backup simply syncs the next time you're online.",
     faqQ4: "Which mileage rates does it use?",
     faqA4:
-      "The US IRS standard rate ($0.725/mile) and Canada's CRA tiered rate ($0.73/km for the first 5,000 km, then $0.67). Estimates update automatically as you drive.",
+      "The US IRS standard rate — 72.5¢ per mile for January–June 2026 and 76¢ per mile from July 1, 2026 — and Canada's CRA tiered rate ($0.73/km for the first 5,000 km, then $0.67). Estimates update automatically as you drive.",
     faqQ5: "How much will Pro cost?",
     faqA5:
       "Pricing isn't final yet. The core app — tracking, manual trips, and basic reports — stays free for everyone.",
@@ -214,6 +215,7 @@ const i18n = {
     how3Body:
       "Оберіть період і надішліть PDF чи CSV з пробігом, пальним, паркуванням і зборами прямо бухгалтеру.",
     rateUsa: "США · ставка IRS",
+    rateUsaNote: "з 1 липня 2026; до того $0.725",
     rateCanada: "Канада · ставка CRA",
     rateCanadaNote: "перші 5 000 км, далі $0.67",
     rateNote: "Ставки вбудовані в додаток, тож оцінка податку оновлюється з кожною поїздкою.",
@@ -259,7 +261,7 @@ const i18n = {
       "Так. Відстеження, облік і звіти працюють без з'єднання. Резервна копія просто синхронізується, щойно ви знову онлайн.",
     faqQ4: "Які ставки пробігу використовуються?",
     faqA4:
-      "Стандартна ставка IRS США ($0.725/милю) та багаторівнева ставка CRA Канади ($0.73/км за перші 5 000 км, далі $0.67). Оцінки оновлюються автоматично під час їзди.",
+      "Стандартна ставка IRS США — 72,5¢ за милю для січня–червня 2026 і 76¢ за милю з 1 липня 2026 — та багаторівнева ставка CRA Канади ($0.73/км за перші 5 000 км, далі $0.67). Оцінки оновлюються автоматично під час їзди.",
     faqQ5: "Скільки коштуватиме Pro?",
     faqA5:
       "Ціни ще не остаточні. Основний додаток — відстеження, ручні поїздки та базові звіти — залишається безкоштовним для всіх.",
