@@ -21,16 +21,16 @@ const FIRESTORE_ENDPOINT =
 const i18n = {
   en: {
     metaDescription:
-      "MarV Route automatically tracks business mileage, estimates your tax deduction, logs fuel and expenses, and exports accountant-ready PDF and CSV reports.",
+      "MarV Route automatically tracks business mileage, keeps a clean trip log, records fuel and expenses, and exports accountant-friendly PDF and CSV reports.",
     navFeatures: "Features",
     navHow: "How it works",
     navScreens: "Screens",
     navFaq: "FAQ",
     navCta: "Get notified",
     heroEyebrow: "Mileage tracking for real driving days",
-    heroTitle: "Every business mile logged. Every deduction counted.",
+    heroTitle: "Every business mile logged. Ready when tax time comes.",
     heroBody:
-      "MarV Route detects your trips automatically, estimates your mileage deduction with built-in IRS and CRA rates, logs fuel and driving costs, and exports clean PDF or CSV reports your accountant will actually like.",
+      "MarV Route detects your trips automatically, keeps a clean log of your business miles and kilometers, estimates your US mileage deduction at the IRS standard rate, logs fuel and driving costs, and exports PDF or CSV reports your accountant will actually like.",
     heroCtaPrimary: "Notify me at launch",
     heroCtaSecondary: "See what it tracks",
     storeSoon: "Coming soon on",
@@ -51,9 +51,9 @@ const i18n = {
     feat3Title: "Work Mode",
     feat3Body:
       "Set your work shifts once, and every trip driven during a shift is classified as business automatically.",
-    feat4Title: "Tax estimates built in",
+    feat4Title: "Ready for tax time",
     feat4Body:
-      "Deductions are calculated as you drive using the IRS standard mileage rate and CRA's tiered per-kilometer rates.",
+      "In the US, see an estimate of your mileage deduction at the IRS standard rate. In Canada, keep the business-kilometer log you need to claim actual vehicle expenses. Estimates only — not tax advice.",
     feat5Title: "Fuel & driving costs",
     feat5Body:
       "Log fuel fill-ups, parking, tolls, repairs, and service expenses alongside your mileage history.",
@@ -77,11 +77,11 @@ const i18n = {
     how3Title: "Export",
     how3Body:
       "Pick a date range and send a PDF or CSV with mileage, fuel, parking, and tolls straight to your accountant.",
-    rateUsa: "USA · IRS rate",
+    rateUsa: "USA · IRS standard rate",
     rateUsaNote: "from July 1, 2026; $0.725 before",
-    rateCanada: "Canada · CRA rate",
-    rateCanadaNote: "first 5,000 km, then $0.67",
-    rateNote: "Rates are built into the app, so your tax estimate updates with every trip.",
+    rateCanada: "Canada · kilometer log",
+    rateCanadaValue: "Business km <em>logged trip by trip</em>",
+    rateNote: "US amounts are estimates at the IRS standard mileage rate. In Canada the app logs kilometers only, because self-employed drivers claim actual vehicle expenses. Not tax advice.",
     screensEyebrow: "Inside the app",
     screensTitle: "Real screens, real driving data.",
     screensBody:
@@ -93,11 +93,11 @@ const i18n = {
     reportsEyebrow: "Reports",
     reportsTitle: "Accountant-friendly mileage and expense reports.",
     reportsBody:
-      "MarV Route turns daily driving data into simple or detailed reports with business mileage, tax estimates, fuel summaries, parking, tolls, custom date ranges, and one-tap PDF or CSV export.",
+      "MarV Route turns daily driving data into simple or detailed reports with business mileage, an estimated US mileage deduction, fuel summaries, parking, tolls, custom date ranges, and one-tap PDF or CSV export.",
     reportPanelMonth: "Monthly close",
     reportPanelReady: "Ready to export",
     reportLineMileage: "Business mileage",
-    reportLineTax: "Tax estimate",
+    reportLineTax: "Est. deduction (IRS rate)",
     reportLineFuel: "Fuel cost",
     reportLineParking: "Parking & tolls",
     exportPdf: "Export PDF",
@@ -115,19 +115,19 @@ const i18n = {
     faqTitle: "Questions drivers ask before installing.",
     faqQ1: "Does trip detection drain my battery?",
     faqA1:
-      "Auto detection uses Android's low-power location and only wakes up when you actually start moving. You can also leave it off and tap Start trip when you drive — your call.",
+      "Yes, while it's on. Auto detection keeps high-accuracy GPS running and shows a notification the whole time it's watching for trips, so it uses battery much like a navigation app. Keep your phone plugged in on long shifts, or leave auto detection off and tap Start trip when you drive.",
     faqQ2: "Is my driving data private?",
     faqA2:
-      "Your trips and expenses are stored on your device. Cloud backup is optional and tied to your own account — we don't sell or share your data, and routes never go to advertisers.",
+      "Your trips and expenses are stored on your device. If you sign in and use cloud backup, a copy — without detailed GPS traces — is saved to your own account so you can restore it on a new phone. We don't sell your data, and it never goes to advertisers.",
     faqQ3: "Does it work offline?",
     faqA3:
-      "Yes. Tracking, logging, and reports all work without a connection. Cloud backup simply syncs the next time you're online.",
+      "Yes. Tracking, logging, and reports all work without a connection. Maps and address lookup need the internet, and cloud backup runs the next time you're online.",
     faqQ4: "Which mileage rates does it use?",
     faqA4:
-      "The US IRS standard rate — 72.5¢ per mile for January–June 2026 and 76¢ per mile from July 1, 2026 — and Canada's CRA tiered rate ($0.73/km for the first 5,000 km, then $0.67). Estimates update automatically as you drive.",
+      "For the US, the IRS standard mileage rate: 72.5¢ per mile for January–June 2026 and 76¢ per mile from July 1, 2026. The amount is an estimate of the standard-rate deduction — if you use that rate you can't also deduct fuel or repairs, though business parking and tolls still count. For Canada the app applies no rate: self-employed drivers claim actual vehicle expenses by the business share of their kilometers, so MarV Route keeps the kilometer log and leaves the amount to you or your accountant. None of this is tax advice.",
     faqQ5: "How much will Pro cost?",
     faqA5:
-      "Pricing isn't final yet. The core app — tracking, manual trips, and basic reports — stays free for everyone.",
+      "Pricing isn't final yet, and nothing is charged today: until paid plans launch, Pro features can be switched on for free in the app. Trip tracking, manual trips, and on-screen reports stay free for everyone; PDF and CSV export, cloud backup, auto detection, and the other features marked Pro will need a subscription once it launches.",
     faqQ6: "When does it launch?",
     faqA6:
       "MarV Route is in the final stretch before release on the App Store and Google Play, and it will be available to everyone from day one. Leave your email below and we'll tell you the moment it's live.",
@@ -145,7 +145,8 @@ const i18n = {
     formOpt3: "Field service",
     formOpt4: "Personal expense records",
     formConsent:
-      'I agree to be emailed when MarV Route launches. See our <a href="privacy/">Privacy Policy</a>.',
+      "I agree to receive one email from MarV Space when MarV Route launches. I can withdraw my consent at any time. See our <a href=\"privacy/\">Privacy Policy</a>.",
+    formSender: "Sender: MarV Space, 5212 S. Missoula Way, Boise, ID 83709, USA · <a href=\"mailto:marv.labs.it@gmail.com\">marv.labs.it@gmail.com</a>",
     formSubmit: "Notify me at launch",
     footerSupport: "Support",
     footerPrivacy: "Privacy",
@@ -158,16 +159,16 @@ const i18n = {
   },
   uk: {
     metaDescription:
-      "MarV Route автоматично відстежує робочий пробіг, оцінює податкове відрахування, веде облік пального й витрат та експортує готові для бухгалтера звіти PDF і CSV.",
+      "MarV Route автоматично відстежує робочий пробіг, веде чіткий журнал поїздок, облік пального й витрат та експортує зручні для бухгалтера звіти PDF і CSV.",
     navFeatures: "Можливості",
     navHow: "Як працює",
     navScreens: "Екрани",
     navFaq: "Питання",
     navCta: "Сповістити мене",
     heroEyebrow: "Облік пробігу для реальних робочих днів",
-    heroTitle: "Кожна робоча миля врахована. Кожне відрахування пораховане.",
+    heroTitle: "Кожна робоча миля врахована. Усе готове до податкового сезону.",
     heroBody:
-      "MarV Route автоматично визначає поїздки, оцінює податкове відрахування за вбудованими ставками IRS і CRA, веде облік пального та витрат на авто й експортує чисті звіти PDF або CSV, які сподобаються вашому бухгалтеру.",
+      "MarV Route автоматично визначає поїздки, веде чіткий журнал робочих миль і кілометрів, оцінює відрахування за пробіг у США за стандартною ставкою IRS, веде облік пального та витрат на авто й експортує звіти PDF або CSV, які сподобаються вашому бухгалтеру.",
     heroCtaPrimary: "Повідомити про запуск",
     heroCtaSecondary: "Що відстежує додаток",
     storeSoon: "Незабаром у",
@@ -188,9 +189,9 @@ const i18n = {
     feat3Title: "Робочий режим",
     feat3Body:
       "Налаштуйте робочі зміни один раз — і кожна поїздка під час зміни автоматично позначається як робоча.",
-    feat4Title: "Вбудована оцінка податку",
+    feat4Title: "Готово до податкового сезону",
     feat4Body:
-      "Відрахування рахуються під час їзди за стандартною ставкою IRS та багаторівневою покілометровою ставкою CRA.",
+      "У США — орієнтовне відрахування за пробіг за стандартною ставкою IRS. У Канаді — журнал робочих кілометрів, потрібний, щоб заявити фактичні витрати на авто. Це лише оцінки, а не податкова консультація.",
     feat5Title: "Пальне та витрати на авто",
     feat5Body:
       "Записуйте заправки, паркування, збори, ремонти та обслуговування поряд з історією пробігу.",
@@ -207,18 +208,18 @@ const i18n = {
     howTitle: "Їдьте. Перевірте. Експортуйте. Готово.",
     how1Title: "Їдьте",
     how1Body:
-      "Авто-визначення записує поїздки у фоні — або торкніться «Start trip» для живого відстеження з картою.",
+      "Авто-визначення записує поїздки у фоні — або торкніться «Почати поїздку» для живого відстеження з картою.",
     how2Title: "Перевірте",
     how2Body:
       "Перегляньте вхідні на перевірку: робоча чи особиста, платформа, мета. Робочий режим зробить більшу частину за вас.",
     how3Title: "Експортуйте",
     how3Body:
       "Оберіть період і надішліть PDF чи CSV з пробігом, пальним, паркуванням і зборами прямо бухгалтеру.",
-    rateUsa: "США · ставка IRS",
+    rateUsa: "США · стандартна ставка IRS",
     rateUsaNote: "з 1 липня 2026; до того $0.725",
-    rateCanada: "Канада · ставка CRA",
-    rateCanadaNote: "перші 5 000 км, далі $0.67",
-    rateNote: "Ставки вбудовані в додаток, тож оцінка податку оновлюється з кожною поїздкою.",
+    rateCanada: "Канада · журнал кілометрів",
+    rateCanadaValue: "Робочі км <em>запис кожної поїздки</em>",
+    rateNote: "Суми для США — оцінки за стандартною ставкою IRS. У Канаді додаток веде лише облік кілометрів, бо самозайняті водії заявляють фактичні витрати на авто. Це не податкова консультація.",
     screensEyebrow: "Усередині додатку",
     screensTitle: "Справжні екрани, справжні дані поїздок.",
     screensBody:
@@ -230,11 +231,11 @@ const i18n = {
     reportsEyebrow: "Звіти",
     reportsTitle: "Звіти про пробіг і витрати, зручні для бухгалтера.",
     reportsBody:
-      "MarV Route перетворює щоденні дані поїздок на прості чи докладні звіти з робочим пробігом, оцінкою податку, підсумками пального, паркуванням, зборами, довільними періодами та експортом PDF чи CSV в один дотик.",
+      "MarV Route перетворює щоденні дані поїздок на прості чи докладні звіти з робочим пробігом, орієнтовним відрахуванням за пробіг для США, підсумками пального, паркуванням, зборами, довільними періодами та експортом PDF чи CSV в один дотик.",
     reportPanelMonth: "Закриття місяця",
     reportPanelReady: "Готово до експорту",
     reportLineMileage: "Робочий пробіг",
-    reportLineTax: "Оцінка податку",
+    reportLineTax: "Орієнт. відрахування (ставка IRS)",
     reportLineFuel: "Витрати на пальне",
     reportLineParking: "Паркування та збори",
     exportPdf: "Експорт PDF",
@@ -252,19 +253,19 @@ const i18n = {
     faqTitle: "Що водії питають перед встановленням.",
     faqQ1: "Чи розряджає визначення поїздок батарею?",
     faqA1:
-      "Авто-визначення використовує енергоощадну геолокацію Android і прокидається лише тоді, коли ви справді починаєте рухатися. Можна й залишити його вимкненим і торкатися «Start trip», коли їдете — як вам зручніше.",
+      "Так, поки воно ввімкнене. Авто-визначення тримає ввімкненим GPS високої точності й показує сповіщення весь час, поки стежить за поїздками, тож витрачає батарею приблизно як навігатор. На довгих змінах тримайте телефон на зарядці — або залиште авто-визначення вимкненим і торкайтеся «Почати поїздку», коли їдете.",
     faqQ2: "Чи приватні мої дані поїздок?",
     faqA2:
-      "Ваші поїздки та витрати зберігаються на вашому пристрої. Резервна копія в хмарі — за бажанням і прив'язана до вашого акаунта. Ми не продаємо й не передаємо ваші дані, а маршрути ніколи не йдуть до рекламодавців.",
+      "Ваші поїздки та витрати зберігаються на вашому пристрої. Якщо ви ввійшли в акаунт і користуєтеся резервною копією в хмарі, копія — без детальних GPS-треків — зберігається у вашому акаунті, щоб її можна було відновити на новому телефоні. Ми не продаємо ваші дані, і вони ніколи не потрапляють до рекламодавців.",
     faqQ3: "Чи працює без інтернету?",
     faqA3:
-      "Так. Відстеження, облік і звіти працюють без з'єднання. Резервна копія просто синхронізується, щойно ви знову онлайн.",
+      "Так. Відстеження, облік і звіти працюють без з'єднання. Для карт і пошуку адрес потрібен інтернет, а резервна копія в хмарі створюється, щойно ви знову онлайн.",
     faqQ4: "Які ставки пробігу використовуються?",
     faqA4:
-      "Стандартна ставка IRS США — 72,5¢ за милю для січня–червня 2026 і 76¢ за милю з 1 липня 2026 — та багаторівнева ставка CRA Канади ($0.73/км за перші 5 000 км, далі $0.67). Оцінки оновлюються автоматично під час їзди.",
+      "Для США — стандартна ставка IRS: 72,5¢ за милю за січень–червень 2026 і 76¢ за милю з 1 липня 2026. Сума в додатку — це оцінка відрахування за стандартною ставкою: якщо ви користуєтеся нею, окремо відраховувати пальне чи ремонт не можна, а от паркування і платні дороги під час робочих поїздок — можна. Для Канади ставка не застосовується: самозайняті водії заявляють фактичні витрати на авто відповідно до частки робочих кілометрів, тому MarV Route веде журнал кілометрів, а суму визначаєте ви або ваш бухгалтер. Усе це не є податковою консультацією.",
     faqQ5: "Скільки коштуватиме Pro?",
     faqA5:
-      "Ціни ще не остаточні. Основний додаток — відстеження, ручні поїздки та базові звіти — залишається безкоштовним для всіх.",
+      "Ціни ще не остаточні, і зараз нічого не списується: поки платні плани не запущено, функції Pro можна безкоштовно ввімкнути в додатку. Відстеження поїздок, ручні поїздки та звіти на екрані залишаються безкоштовними для всіх; експорт PDF і CSV, резервна копія в хмарі, авто-визначення та інші функції з позначкою Pro потребуватимуть підписки після її запуску.",
     faqQ6: "Коли реліз?",
     faqA6:
       "MarV Route на фінішній прямій перед виходом в App Store і Google Play, і від першого дня буде доступний усім. Залиште email нижче — ми повідомимо, щойно він з'явиться.",
@@ -282,7 +283,8 @@ const i18n = {
     formOpt3: "Виїзні послуги",
     formOpt4: "Облік особистих витрат",
     formConsent:
-      'Я погоджуюся отримати лист, коли MarV Route вийде. Див. нашу <a href="privacy/">Політику конфіденційності</a>.',
+      "Я погоджуюся отримати один лист від MarV Space, коли MarV Route вийде. Я можу будь-коли відкликати згоду. Див. нашу <a href=\"privacy/\">Політику конфіденційності</a>.",
+    formSender: "Відправник: MarV Space, 5212 S. Missoula Way, Boise, ID 83709, USA · <a href=\"mailto:marv.labs.it@gmail.com\">marv.labs.it@gmail.com</a>",
     formSubmit: "Повідомити про запуск",
     footerSupport: "Підтримка",
     footerPrivacy: "Конфіденційність",
@@ -306,7 +308,7 @@ function dict() {
   return Object.assign({}, i18n.en, i18n[currentLang] || {});
 }
 
-function applyLanguage(lang) {
+function applyLanguage(lang, persist) {
   currentLang = SUPPORTED_LANGS.indexOf(lang) !== -1 ? lang : "en";
   const t = dict();
 
@@ -335,9 +337,13 @@ function applyLanguage(lang) {
   renderFormMessage();
   fixFileProtocolLinks();
 
-  try {
-    localStorage.setItem("marv-lang", currentLang);
-  } catch (e) {}
+  // Saved only when the visitor picks a language here. The legal pages also
+  // offer French; a choice made there has to survive a visit to this page.
+  if (persist) {
+    try {
+      localStorage.setItem("marv-lang", currentLang);
+    } catch (e) {}
+  }
 }
 
 // ─── URL hygiene ─────────────────────────────────────────────────────────────
@@ -394,12 +400,12 @@ function applyTheme(theme) {
   if (!savedLang && navigator.language && navigator.language.toLowerCase().indexOf("uk") === 0) {
     savedLang = "uk";
   }
-  applyLanguage(savedLang || "en");
+  applyLanguage(savedLang || "en", false);
 
   const langToggle = document.querySelector(".lang-toggle");
   if (langToggle) {
     langToggle.addEventListener("click", () => {
-      applyLanguage(currentLang === "en" ? "uk" : "en");
+      applyLanguage(currentLang === "en" ? "uk" : "en", true);
     });
   }
 

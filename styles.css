@@ -849,6 +849,20 @@ select:focus {
   width: 0;
 }
 
+/* Who is asking for the consent above: sender name, postal address, contact. */
+.form-sender {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: -6px 0 0;
+}
+
+.form-sender a {
+  color: var(--blue-dark);
+  text-decoration: underline;
+}
+
 .form-message {
   color: var(--blue-dark);
   font-weight: 800;
@@ -1306,6 +1320,18 @@ select:focus {
   font-size: 14px;
   font-weight: 750;
   margin-bottom: 28px;
+}
+
+/* "Version française" pointer under the date */
+.legal p.legal-lang {
+  font-size: 14px;
+  margin: -18px 0 28px;
+}
+
+/* Notes that switch a clause off for a group of readers (Québec consumers) */
+.legal p.legal-note {
+  border-left: 3px solid var(--blue-dark);
+  padding-left: 14px;
 }
 
 .legal h2 {

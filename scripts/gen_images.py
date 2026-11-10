@@ -54,9 +54,9 @@ d.text((232, 162), "Mileage & Expense Tracking", font=load_font(26), fill=MUTED)
 
 f_h1 = load_font(70, True)
 d.text((80, 268), "Every business mile logged.", font=f_h1, fill="white")
-d.text((80, 348), "Every deduction counted.", font=f_h1, fill=BLUE)
+d.text((80, 348), "Ready when tax time comes.", font=f_h1, fill=BLUE)
 
-d.text((80, 452), "Automatic trip detection · IRS & CRA tax estimates · PDF & CSV reports",
+d.text((80, 452), "Automatic trip detection · US mileage estimate · PDF & CSV reports",
        font=load_font(27), fill=MUTED)
 
 # chips
