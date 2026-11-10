@@ -6,14 +6,14 @@
     <meta
       name="description"
       data-i18n="metaDescription"
-      content="MarV Route automatically tracks business mileage, estimates your tax deduction, logs fuel and expenses, and exports accountant-ready PDF and CSV reports."
+      content="MarV Route automatically tracks business mileage, keeps a clean trip log, records fuel and expenses, and exports accountant-friendly PDF and CSV reports."
     />
     <meta name="theme-color" content="#08131d" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="MarV Route — Mileage & Expense Tracking" />
     <meta
       property="og:description"
-      content="Automatic trip detection, tax-ready mileage reports, fuel and expense logging, and maintenance reminders for drivers in the USA and Canada."
+      content="Automatic trip detection, accountant-friendly mileage reports, fuel and expense logging, and maintenance reminders for drivers in the USA and Canada."
     />
     <meta property="og:image" content="assets/og-image.png" />
     <meta property="og:image:width" content="1200" />
@@ -22,7 +22,7 @@
     <meta name="twitter:title" content="MarV Route — Mileage & Expense Tracking" />
     <meta
       name="twitter:description"
-      content="Automatic trip detection, tax-ready mileage reports, fuel and expense logging for drivers in the USA and Canada."
+      content="Automatic trip detection, accountant-friendly mileage reports, fuel and expense logging for drivers in the USA and Canada."
     />
     <meta name="twitter:image" content="assets/og-image.png" />
     <link rel="icon" type="image/png" href="assets/marv-route-icon.png" />
@@ -83,12 +83,8 @@
       <section class="hero">
         <div class="hero-copy reveal">
           <p class="eyebrow" data-i18n="heroEyebrow">Mileage tracking for real driving days</p>
-          <h1 data-i18n="heroTitle">Every business mile logged. Every deduction counted.</h1>
-          <p data-i18n="heroBody">
-            MarV Route detects your trips automatically, estimates your mileage deduction with
-            built-in IRS and CRA rates, logs fuel and driving costs, and exports clean PDF or
-            CSV reports your accountant will actually like.
-          </p>
+          <h1 data-i18n="heroTitle">Every business mile logged. Ready when tax time comes.</h1>
+          <p data-i18n="heroBody">MarV Route detects your trips automatically, keeps a clean log of your business miles and kilometers, estimates your US mileage deduction at the IRS standard rate, logs fuel and driving costs, and exports PDF or CSV reports your accountant will actually like.</p>
           <div class="hero-actions">
             <a class="button primary" href="#download" data-i18n="heroCtaPrimary">Notify me at launch</a>
             <a class="button secondary" href="#features" data-i18n="heroCtaSecondary">See what it tracks</a>
@@ -279,8 +275,8 @@
           </article>
           <article class="feature-card reveal">
             <span>04</span>
-            <h3 data-i18n="feat4Title">Tax estimates built in</h3>
-            <p data-i18n="feat4Body">Deductions are calculated as you drive using the IRS standard mileage rate and CRA's tiered per-kilometer rates.</p>
+            <h3 data-i18n="feat4Title">Ready for tax time</h3>
+            <p data-i18n="feat4Body">In the US, see an estimate of your mileage deduction at the IRS standard rate. In Canada, keep the business-kilometer log you need to claim actual vehicle expenses. Estimates only — not tax advice.</p>
           </article>
           <article class="feature-card reveal">
             <span>05</span>
@@ -327,16 +323,16 @@
             <p data-i18n="how3Body">Pick a date range and send a PDF or CSV with mileage, fuel, parking, and tolls straight to your accountant.</p>
           </li>
         </ol>
-        <div class="rate-strip reveal" aria-label="Built-in mileage rates">
+        <div class="rate-strip reveal" aria-label="How mileage is counted">
           <div>
-            <span data-i18n="rateUsa">USA · IRS rate</span>
+            <span data-i18n="rateUsa">USA · IRS standard rate</span>
             <strong>$0.76 / mile <em data-i18n="rateUsaNote">from July 1, 2026; $0.725 before</em></strong>
           </div>
           <div>
-            <span data-i18n="rateCanada">Canada · CRA rate</span>
-            <strong>$0.73 / km <em data-i18n="rateCanadaNote">first 5,000 km, then $0.67</em></strong>
+            <span data-i18n="rateCanada">Canada · kilometer log</span>
+            <strong data-i18n="rateCanadaValue">Business km <em>logged trip by trip</em></strong>
           </div>
-          <p data-i18n="rateNote">Rates are built into the app, so your tax estimate updates with every trip.</p>
+          <p data-i18n="rateNote">US amounts are estimates at the IRS standard mileage rate. In Canada the app logs kilometers only, because self-employed drivers claim actual vehicle expenses. Not tax advice.</p>
         </div>
       </section>
 
@@ -373,11 +369,7 @@
         <div class="report-copy reveal">
           <p class="eyebrow" data-i18n="reportsEyebrow">Reports</p>
           <h2 data-i18n="reportsTitle">Accountant-friendly mileage and expense reports.</h2>
-          <p data-i18n="reportsBody">
-            MarV Route turns daily driving data into simple or detailed reports with business
-            mileage, tax estimates, fuel summaries, parking, tolls, custom date ranges, and
-            one-tap PDF or CSV export.
-          </p>
+          <p data-i18n="reportsBody">MarV Route turns daily driving data into simple or detailed reports with business mileage, an estimated US mileage deduction, fuel summaries, parking, tolls, custom date ranges, and one-tap PDF or CSV export.</p>
         </div>
         <div class="report-panel reveal">
           <div class="panel-header">
@@ -389,8 +381,8 @@
             <strong>842.7 mi</strong>
           </div>
           <div class="report-line">
-            <span data-i18n="reportLineTax">Tax estimate</span>
-            <strong>$610.96</strong>
+            <span data-i18n="reportLineTax">Est. deduction (IRS rate)</span>
+            <strong>$640.45</strong>
           </div>
           <div class="report-line">
             <span data-i18n="reportLineFuel">Fuel cost</span>
@@ -431,23 +423,23 @@
         <div class="faq-list">
           <details class="faq-item reveal">
             <summary data-i18n="faqQ1">Does trip detection drain my battery?</summary>
-            <p data-i18n="faqA1">Auto detection uses Android's low-power location and only wakes up when you actually start moving. You can also leave it off and tap Start trip when you drive — your call.</p>
+            <p data-i18n="faqA1">Yes, while it's on. Auto detection keeps high-accuracy GPS running and shows a notification the whole time it's watching for trips, so it uses battery much like a navigation app. Keep your phone plugged in on long shifts, or leave auto detection off and tap Start trip when you drive.</p>
           </details>
           <details class="faq-item reveal">
             <summary data-i18n="faqQ2">Is my driving data private?</summary>
-            <p data-i18n="faqA2">Your trips and expenses are stored on your device. Cloud backup is optional and tied to your own account — we don't sell or share your data, and routes never go to advertisers.</p>
+            <p data-i18n="faqA2">Your trips and expenses are stored on your device. If you sign in and use cloud backup, a copy — without detailed GPS traces — is saved to your own account so you can restore it on a new phone. We don't sell your data, and it never goes to advertisers.</p>
           </details>
           <details class="faq-item reveal">
             <summary data-i18n="faqQ3">Does it work offline?</summary>
-            <p data-i18n="faqA3">Yes. Tracking, logging, and reports all work without a connection. Cloud backup simply syncs the next time you're online.</p>
+            <p data-i18n="faqA3">Yes. Tracking, logging, and reports all work without a connection. Maps and address lookup need the internet, and cloud backup runs the next time you're online.</p>
           </details>
           <details class="faq-item reveal">
             <summary data-i18n="faqQ4">Which mileage rates does it use?</summary>
-            <p data-i18n="faqA4">The US IRS standard rate — 72.5¢ per mile for January–June 2026 and 76¢ per mile from July 1, 2026 — and Canada's CRA tiered rate ($0.73/km for the first 5,000 km, then $0.67). Estimates update automatically as you drive.</p>
+            <p data-i18n="faqA4">For the US, the IRS standard mileage rate: 72.5¢ per mile for January–June 2026 and 76¢ per mile from July 1, 2026. The amount is an estimate of the standard-rate deduction — if you use that rate you can't also deduct fuel or repairs, though business parking and tolls still count. For Canada the app applies no rate: self-employed drivers claim actual vehicle expenses by the business share of their kilometers, so MarV Route keeps the kilometer log and leaves the amount to you or your accountant. None of this is tax advice.</p>
           </details>
           <details class="faq-item reveal">
             <summary data-i18n="faqQ5">How much will Pro cost?</summary>
-            <p data-i18n="faqA5">Pricing isn't final yet. The core app — tracking, manual trips, and basic reports — stays free for everyone.</p>
+            <p data-i18n="faqA5">Pricing isn't final yet, and nothing is charged today: until paid plans launch, Pro features can be switched on for free in the app. Trip tracking, manual trips, and on-screen reports stay free for everyone; PDF and CSV export, cloud backup, auto detection, and the other features marked Pro will need a subscription once it launches.</p>
           </details>
           <details class="faq-item reveal">
             <summary data-i18n="faqQ6">When does it launch?</summary>
@@ -496,8 +488,9 @@
           />
           <label class="consent">
             <input type="checkbox" name="consent" required />
-            <span data-i18n="formConsent">I agree to be emailed when MarV Route launches. See our <a href="privacy/">Privacy Policy</a>.</span>
+            <span data-i18n="formConsent">I agree to receive one email from MarV Space when MarV Route launches. I can withdraw my consent at any time. See our <a href="privacy/">Privacy Policy</a>.</span>
           </label>
+          <p class="form-sender" data-i18n="formSender">Sender: MarV Space, 5212 S. Missoula Way, Boise, ID 83709, USA · <a href="mailto:marv.labs.it@gmail.com">marv.labs.it@gmail.com</a></p>
           <button class="button primary" type="submit" data-i18n="formSubmit">Notify me at launch</button>
           <p class="form-message" role="status" aria-live="polite"></p>
         </form>
@@ -507,7 +500,7 @@
     <footer class="site-footer">
       <div class="footer-brand">
         <img src="assets/marv-route-icon.png" alt="" />
-        <span>© 2026 MarV Labs</span>
+        <span>© 2026 MarV Space</span>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#features" data-i18n="navFeatures">Features</a>
